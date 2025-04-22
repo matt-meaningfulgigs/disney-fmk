@@ -29,6 +29,7 @@ async function loadCharacterData(): Promise<void> {
 function startNewGame(): void {
     selectedActions = {};
     selectRandomCharacters();
+    updateShareLink();
 }
 
 function getAvailableCharacters(): Character[] {
@@ -53,12 +54,23 @@ function displayCharacters(): void {
     currentCharacters.forEach((character, index) => {
         const emojiElement = document.getElementById(`character-${index + 1}-emoji`);
         const nameElement = document.getElementById(`character-${index + 1}-name`);
+        const actionButtons = document.querySelectorAll(`[data-character="${index + 1}"]`);
         
         if (emojiElement && nameElement) {
             console.log(`Setting emoji for ${character.name}:`, character.emoji);
             emojiElement.textContent = character.emoji;
             nameElement.textContent = character.name;
         }
+
+        // Reset button states
+        actionButtons.forEach(button => {
+            const action = (button as HTMLElement).dataset.action;
+            if (action && selectedActions[action] === character.name) {
+                (button as HTMLButtonElement).disabled = true;
+            } else {
+                (button as HTMLButtonElement).disabled = false;
+            }
+        });
     });
 }
 
@@ -82,6 +94,8 @@ function updateShareLink(): void {
         url.searchParams.set('actions', JSON.stringify(selectedActions));
         shareLink.href = url.toString();
         shareLink.textContent = 'Share your choices';
+        // Update the URL in the browser without reloading
+        window.history.pushState({}, '', url.toString());
     }
 }
 
