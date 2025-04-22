@@ -1,4 +1,4 @@
-// Test URL parameters
+// Handle URL parameters and button clicks
 document.addEventListener('DOMContentLoaded', () => {
     // Get all action buttons
     const actionButtons = document.querySelectorAll('[data-action]');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Log current URL parameters
+    // Load state from URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const params: Record<string, string> = {};
     urlParams.forEach((value, key) => {
