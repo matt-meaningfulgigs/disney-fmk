@@ -1,0 +1,130 @@
+{
+  "princesses": [
+    {
+      "name": "Cinderella",
+      "image": "cinderella.jpg"
+    },
+    {
+      "name": "Snow White",
+      "image": "snow-white.jpg"
+    },
+    {
+      "name": "Aurora",
+      "image": "aurora.jpg"
+    },
+    {
+      "name": "Ariel",
+      "image": "ariel.jpg"
+    },
+    {
+      "name": "Belle",
+      "image": "belle.jpg"
+    },
+    {
+      "name": "Jasmine",
+      "image": "jasmine.jpg"
+    },
+    {
+      "name": "Pocahontas",
+      "image": "pocahontas.jpg"
+    },
+    {
+      "name": "Mulan",
+      "image": "mulan.jpg"
+    },
+    {
+      "name": "Tiana",
+      "image": "tiana.jpg"
+    },
+    {
+      "name": "Rapunzel",
+      "image": "rapunzel.jpg"
+    },
+    {
+      "name": "Merida",
+      "image": "merida.jpg"
+    },
+    {
+      "name": "Moana",
+      "image": "moana.jpg"
+    }
+  ],
+  "villains": [
+    {
+      "name": "Maleficent",
+      "image": "maleficent.jpg"
+    },
+    {
+      "name": "Ursula",
+      "image": "ursula.jpg"
+    },
+    {
+      "name": "Jafar",
+      "image": "jafar.jpg"
+    },
+    {
+      "name": "Scar",
+      "image": "scar.jpg"
+    },
+    {
+      "name": "Cruella de Vil",
+      "image": "cruella.jpg"
+    },
+    {
+      "name": "Hades",
+      "image": "hades.jpg"
+    }
+  ],
+  "sidekicks": [
+    {
+      "name": "Timon",
+      "image": "timon.jpg"
+    },
+    {
+      "name": "Pumbaa",
+      "image": "pumbaa.jpg"
+    },
+    {
+      "name": "Olaf",
+      "image": "olaf.jpg"
+    },
+    {
+      "name": "Sebastian",
+      "image": "sebastian.jpg"
+    },
+    {
+      "name": "Flounder",
+      "image": "flounder.jpg"
+    },
+    {
+      "name": "Pascal",
+      "image": "pascal.jpg"
+    }
+  ],
+  "princes": [
+    {
+      "name": "Prince Charming",
+      "image": "prince-charming.jpg"
+    },
+    {
+      "name": "Prince Eric",
+      "image": "prince-eric.jpg"
+    },
+    {
+      "name": "Prince Phillip",
+      "image": "prince-phillip.jpg"
+    },
+    {
+      "name": "Aladdin",
+      "image": "aladdin.jpg"
+    },
+    {
+      "name": "Prince Naveen",
+      "image": "prince-naveen.jpg"
+    },
+    {
+      "name": "Prince Adam",
+      "image": "prince-adam.jpg"
+    }
+  ]
+}

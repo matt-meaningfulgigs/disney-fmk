@@ -1,0 +1,25 @@
+{
+  "name": "disney-fmk",
+  "version": "1.0.0",
+  "description": "FMK but Disney",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch src -e ts,json --exec ts-node src/server.ts",
+    "build": "tsc && cp -r src/public dist/ && cp -r src/data dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.19",
+    "express": "^4.18.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
