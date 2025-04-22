@@ -1,32 +1,32 @@
 # Disney FMK
 
-A fun game where you choose which Disney characters to Fuck, Marry, or Kill. The game randomly selects three Disney characters from your chosen categories (Princesses, Villains, Sidekicks, and Princes) and lets you make your choices.
+A "Fuck, Marry, Kill" game featuring Disney characters.
 
 ## Features
 
-- Random selection of 3 Disney characters
-- Category filtering (Princesses, Villains, Sidekicks, Princes)
-- Shareable game state via URL
-- Responsive design
-- No duplicate characters
-- Each action (Fuck, Marry, Kill) can only be used once
+- Character categories: Princesses, Villains, Sidekicks, Princes
+- Category filtering
+- Shareable game links
+- Mobile-friendly design
+- Emoji-based character representation
 
-## Setup
+## Tech Stack
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Build for production:
-   ```bash
-   npm run build
-   npm start
-   ```
+- Next.js
+- TypeScript
+- Express
+- GitHub Pages
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+Automatically deployed to GitHub Pages via GitHub Actions.
 
 ## How to Play
 
@@ -43,8 +43,3 @@ A fun game where you choose which Disney characters to Fuck, Marry, or Kill. The
 - `src/public/styles.css` - CSS styles
 - `src/public/script.js` - Frontend JavaScript
 - `src/data/disneyCharacters.json` - Character data
-- `src/public/images/` - Character images
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!

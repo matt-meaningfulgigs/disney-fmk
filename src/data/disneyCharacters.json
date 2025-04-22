@@ -2,129 +2,129 @@
   "princesses": [
     {
       "name": "Cinderella",
-      "image": "cinderella.jpg"
+      "emoji": "👸🏻"
     },
     {
       "name": "Snow White",
-      "image": "snow-white.jpg"
+      "emoji": "👸🏻"
     },
     {
       "name": "Aurora",
-      "image": "aurora.jpg"
+      "emoji": "👸🏻"
     },
     {
       "name": "Ariel",
-      "image": "ariel.jpg"
+      "emoji": "🧜🏻‍♀️"
     },
     {
       "name": "Belle",
-      "image": "belle.jpg"
+      "emoji": "👸🏻"
     },
     {
       "name": "Jasmine",
-      "image": "jasmine.jpg"
+      "emoji": "👸🏽"
     },
     {
       "name": "Pocahontas",
-      "image": "pocahontas.jpg"
+      "emoji": "👸🏽"
     },
     {
       "name": "Mulan",
-      "image": "mulan.jpg"
+      "emoji": "👸🏻"
     },
     {
       "name": "Tiana",
-      "image": "tiana.jpg"
+      "emoji": "👸🏾"
     },
     {
       "name": "Rapunzel",
-      "image": "rapunzel.jpg"
+      "emoji": "👸🏻"
     },
     {
       "name": "Merida",
-      "image": "merida.jpg"
+      "emoji": "👸🏻"
     },
     {
       "name": "Moana",
-      "image": "moana.jpg"
+      "emoji": "👸🏽"
     }
   ],
   "villains": [
     {
       "name": "Maleficent",
-      "image": "maleficent.jpg"
+      "emoji": "🧙🏻‍♀️"
     },
     {
       "name": "Ursula",
-      "image": "ursula.jpg"
+      "emoji": "🐙"
     },
     {
       "name": "Jafar",
-      "image": "jafar.jpg"
+      "emoji": "🧞🏽‍♂️"
     },
     {
       "name": "Scar",
-      "image": "scar.jpg"
+      "emoji": "🦁"
     },
     {
       "name": "Cruella de Vil",
-      "image": "cruella.jpg"
+      "emoji": "👩🏻"
     },
     {
       "name": "Hades",
-      "image": "hades.jpg"
+      "emoji": "👹"
     }
   ],
   "sidekicks": [
     {
       "name": "Timon",
-      "image": "timon.jpg"
+      "emoji": "🦝"
     },
     {
       "name": "Pumbaa",
-      "image": "pumbaa.jpg"
+      "emoji": "🐗"
     },
     {
       "name": "Olaf",
-      "image": "olaf.jpg"
+      "emoji": "⛄"
     },
     {
       "name": "Sebastian",
-      "image": "sebastian.jpg"
+      "emoji": "🦀"
     },
     {
       "name": "Flounder",
-      "image": "flounder.jpg"
+      "emoji": "🐠"
     },
     {
       "name": "Pascal",
-      "image": "pascal.jpg"
+      "emoji": "🦎"
     }
   ],
   "princes": [
     {
       "name": "Prince Charming",
-      "image": "prince-charming.jpg"
+      "emoji": "🤴🏻"
     },
     {
       "name": "Prince Eric",
-      "image": "prince-eric.jpg"
+      "emoji": "🤴🏻"
     },
     {
       "name": "Prince Phillip",
-      "image": "prince-phillip.jpg"
+      "emoji": "🤴🏻"
     },
     {
       "name": "Aladdin",
-      "image": "aladdin.jpg"
+      "emoji": "🤴🏽"
     },
     {
       "name": "Prince Naveen",
-      "image": "prince-naveen.jpg"
+      "emoji": "🤴🏾"
     },
     {
       "name": "Prince Adam",
-      "image": "prince-adam.jpg"
+      "emoji": "🤴🏻"
     }
   ]
 }
