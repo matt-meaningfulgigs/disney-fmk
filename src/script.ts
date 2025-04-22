@@ -15,5 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Log current URL parameters
     const urlParams = new URLSearchParams(window.location.search);
-    console.log('Current URL parameters:', Object.fromEntries(urlParams));
+    const params: Record<string, string> = {};
+    urlParams.forEach((value, key) => {
+        params[key] = value;
+    });
+    console.log('Current URL parameters:', params);
 }); 
