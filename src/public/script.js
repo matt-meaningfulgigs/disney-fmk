@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Get DOM elements
   const newGameBtn = document.getElementById('newGame');
   const copyLinkBtn = document.getElementById('copyLink');
+  const copyUrlBtn = document.getElementById('copyUrl');
   const shareLinkInput = document.getElementById('shareLink');
   const categorySelect = document.getElementById('categorySelect');
+  const refreshBtn = document.getElementById('refresh');
 
   // Load character data
   let characterData = {};
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const response = await fetch('/api/characters');
       characterData = await response.json();
-      console.log('Loaded character data:', characterData); // Debug log
+      console.log('Loaded character data:', characterData);
       loadGameState();
     } catch (error) {
       console.error('Error loading character data:', error);
@@ -27,19 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
   function startNewGame() {
     selectedActions = {};
     const availableCharacters = getAvailableCharacters();
-    console.log('Available characters:', availableCharacters); // Debug log
     currentCharacters = selectRandomCharacters(availableCharacters, 3);
-    console.log('Selected characters:', currentCharacters); // Debug log
     displayCharacters(currentCharacters);
-    updateShareLink();
+    updateUrl();
   }
 
   // Get characters from selected category
   function getAvailableCharacters() {
     if (selectedCategory === 'all') {
-      const allCharacters = Object.values(characterData).flat();
-      console.log('All characters:', allCharacters); // Debug log
-      return allCharacters;
+      return Object.values(characterData).flat();
     }
     return characterData[selectedCategory] || [];
   }
@@ -52,20 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Display characters
   function displayCharacters(characters) {
-    console.log('Displaying characters:', characters); // Debug log
+    console.log('Displaying characters:', characters);
     characters.forEach((character, index) => {
       const emojiElement = document.getElementById(`char${index + 1}-emoji`);
       const nameElement = document.getElementById(`char${index + 1}-name`);
       const buttons = document.querySelectorAll(`.fmk-btn[data-char="${index + 1}"]`);
 
-      console.log(`Character ${index + 1}:`, character); // Debug log
-      console.log(`Emoji element for ${character.name}:`, emojiElement); // Debug log
-      console.log(`Setting emoji for ${character.name}:`, character.emoji); // Debug log
-
       if (emojiElement && character.emoji) {
         emojiElement.textContent = character.emoji;
-      } else {
-        console.error(`Failed to set emoji for ${character.name}`);
       }
 
       if (nameElement) {
@@ -103,27 +95,34 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    updateShareLink();
+    updateUrl();
   }
 
-  // Update share link
-  function updateShareLink() {
-    const gameState = {
-      category: selectedCategory,
-      characters: currentCharacters.map((character, index) => ({
-        name: character.name,
-        action: Object.entries(selectedActions).find(([_, charIdx]) => charIdx === (index + 1).toString())?.[0] || ''
-      }))
-    };
+  // Update URL with current game state
+  function updateUrl() {
+    const urlParams = new URLSearchParams();
 
-    const encodedState = btoa(JSON.stringify(gameState));
-    const shareUrl = `${window.location.origin}${window.location.pathname}?state=${encodedState}`;
-    return shareUrl;
+    // Add category
+    if (selectedCategory !== 'all') {
+      urlParams.set('category', selectedCategory);
+    }
+
+    // Add characters and their actions
+    currentCharacters.forEach((character, index) => {
+      const action = Object.entries(selectedActions).find(([_, charIdx]) => charIdx === (index + 1).toString())?.[0];
+      if (action) {
+        urlParams.set(character.name.toLowerCase().replace(/\s+/g, ''), action);
+      }
+    });
+
+    // Update URL without reloading the page
+    const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+    window.history.pushState({}, '', newUrl);
   }
 
   // Handle share button click
   async function handleShare() {
-    const shareUrl = updateShareLink();
+    const shareUrl = window.location.href;
 
     if (navigator.share) {
       try {
@@ -134,84 +133,71 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       } catch (error) {
         console.error('Error sharing:', error);
-        copyToClipboard(shareUrl);
       }
-    } else {
-      copyToClipboard(shareUrl);
     }
   }
 
-  // Copy to clipboard
-  function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-      alert('Link copied to clipboard!');
+  // Copy URL to clipboard
+  function copyUrl() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+      alert('URL copied to clipboard!');
     }).catch(err => {
-      console.error('Failed to copy:', err);
+      console.error('Failed to copy URL:', err);
     });
   }
 
   // Handle category change
   function handleCategoryChange(event) {
     selectedCategory = event.target.value;
-    console.log('Category changed to:', selectedCategory); // Debug log
     startNewGame();
   }
 
   // Load game state from URL
   function loadGameState() {
     const urlParams = new URLSearchParams(window.location.search);
-    const stateParam = urlParams.get('state');
 
-    if (stateParam) {
-      try {
-        const gameState = JSON.parse(atob(stateParam));
-        selectedCategory = gameState.category;
-        console.log('Loading game state:', gameState); // Debug log
-
-        // Update category select
-        if (categorySelect) {
-          categorySelect.value = selectedCategory;
-        }
-
-        // Get available characters
-        const availableCharacters = getAvailableCharacters();
-
-        // Find and display the characters from the game state
-        currentCharacters = gameState.characters.map(charState => {
-          return availableCharacters.find(char => char.name === charState.name);
-        }).filter(Boolean);
-
-        console.log('Restored characters:', currentCharacters); // Debug log
-
-        if (currentCharacters.length === 3) {
-          displayCharacters(currentCharacters);
-
-          // Restore actions
-          gameState.characters.forEach((charState, index) => {
-            if (charState.action) {
-              const actionBtn = document.querySelector(`.fmk-btn[data-char="${index + 1}"][data-action="${charState.action}"]`);
-              if (actionBtn) {
-                actionBtn.disabled = true;
-                selectedActions[charState.action] = (index + 1).toString();
-              }
-            }
-          });
-
-          // Disable used actions
-          Object.entries(selectedActions).forEach(([action, charIndex]) => {
-            document.querySelectorAll(`.fmk-btn[data-action="${action}"]`).forEach(btn => {
-              if (btn.dataset.char !== charIndex) {
-                btn.disabled = true;
-              }
-            });
-          });
-        } else {
-          startNewGame();
-        }
-      } catch (error) {
-        console.error('Error loading game state:', error);
-        startNewGame();
+    // Get category from URL
+    const category = urlParams.get('category');
+    if (category) {
+      selectedCategory = category;
+      if (categorySelect) {
+        categorySelect.value = category;
       }
+    }
+
+    // Get available characters
+    const availableCharacters = getAvailableCharacters();
+
+    // Get characters and actions from URL
+    const characters = [];
+    const actions = {};
+
+    urlParams.forEach((value, key) => {
+      if (key !== 'category') {
+        const character = availableCharacters.find(char =>
+          char.name.toLowerCase().replace(/\s+/g, '') === key
+        );
+        if (character) {
+          characters.push(character);
+          actions[value] = characters.length.toString();
+        }
+      }
+    });
+
+    if (characters.length === 3) {
+      currentCharacters = characters;
+      selectedActions = actions;
+      displayCharacters(currentCharacters);
+
+      // Restore button states
+      Object.entries(selectedActions).forEach(([action, charIndex]) => {
+        document.querySelectorAll(`.fmk-btn[data-action="${action}"]`).forEach(btn => {
+          if (btn.dataset.char !== charIndex) {
+            btn.disabled = true;
+          }
+        });
+      });
     } else {
       startNewGame();
     }
@@ -219,10 +205,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add event listeners
   categorySelect.addEventListener('change', handleCategoryChange);
+  refreshBtn.addEventListener('click', startNewGame);
   document.querySelectorAll('.fmk-btn').forEach(btn => {
     btn.addEventListener('click', handleAction);
   });
   copyLinkBtn.addEventListener('click', handleShare);
+  copyUrlBtn.addEventListener('click', copyUrl);
 
   // Initialize the game
   loadCharacterData();
