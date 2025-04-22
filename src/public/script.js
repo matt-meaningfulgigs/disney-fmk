@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let selectedCategory = 'all';
   let selectedActions = {};
   let currentCharacters = [];
+  let characters = {};
 
   // Get DOM elements
   const newGameBtn = document.getElementById('newGame');
@@ -12,117 +13,85 @@ document.addEventListener('DOMContentLoaded', () => {
   const refreshBtn = document.getElementById('refresh');
 
   // Load character data
-  let characterData = {};
-
   async function loadCharacterData() {
     try {
-      const response = await fetch('/api/characters');
-      characterData = await response.json();
-      console.log('Loaded character data:', characterData);
-      loadGameState();
+      const response = await fetch('../data/disneyCharacters.json');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      characters = await response.json();
+      newGame();
     } catch (error) {
       console.error('Error loading character data:', error);
     }
   }
 
-  // Initialize the game
-  function startNewGame() {
-    selectedActions = {};
-    const availableCharacters = getAvailableCharacters();
-    currentCharacters = selectRandomCharacters(availableCharacters, 3);
-    displayCharacters(currentCharacters);
-    updateUrl();
-  }
-
-  // Get characters from selected category
-  function getAvailableCharacters() {
-    if (selectedCategory === 'all') {
-      return Object.values(characterData).flat();
+  function getRandomCharacters(category = 'all') {
+    let pool = [];
+    if (category === 'all') {
+      pool = [...characters.princesses, ...characters.villains, ...characters.sidekicks];
+    } else {
+      pool = characters[category];
     }
-    return characterData[selectedCategory] || [];
+
+    const shuffled = [...pool].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 3);
   }
 
-  // Select random characters
-  function selectRandomCharacters(characters, count) {
-    const shuffled = [...characters].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
+  function createCharacterCard(character, index) {
+    const card = document.createElement('div');
+    card.className = 'character-card';
+    card.innerHTML = `
+      <div class="emoji">${character.emoji}</div>
+      <div class="name">${character.name}</div>
+      <div class="buttons">
+        <button class="fuck" onclick="handleAction('fuck', ${index})">Fuck</button>
+        <button class="marry" onclick="handleAction('marry', ${index})">Marry</button>
+        <button class="kill" onclick="handleAction('kill', ${index})">Kill</button>
+      </div>
+    `;
+    return card;
   }
 
-  // Display characters
   function displayCharacters(characters) {
-    console.log('Displaying characters:', characters);
+    const container = document.getElementById('characters');
+    container.innerHTML = '';
     characters.forEach((character, index) => {
-      const emojiElement = document.getElementById(`char${index + 1}-emoji`);
-      const nameElement = document.getElementById(`char${index + 1}-name`);
-      const buttons = document.querySelectorAll(`.fmk-btn[data-char="${index + 1}"]`);
-
-      console.log(`Setting emoji for ${character.name}:`, character.emoji);
-      console.log('Emoji element:', emojiElement);
-
-      if (emojiElement) {
-        emojiElement.textContent = character.emoji;
-        emojiElement.style.fontSize = '3.5rem';
-        emojiElement.style.display = 'block';
-      }
-
-      if (nameElement) {
-        nameElement.textContent = character.name;
-      }
-
-      buttons.forEach(btn => {
-        btn.disabled = false;
-      });
+      container.appendChild(createCharacterCard(character, index));
     });
   }
 
-  // Handle action selection
-  function handleAction(event) {
-    const action = event.target.dataset.action;
-    const charIndex = event.target.dataset.char;
-
+  function handleAction(action, index) {
     // If this action is already selected for another character, return
-    if (selectedActions[action] && selectedActions[action] !== charIndex) {
+    if (selectedActions[action] !== undefined && selectedActions[action] !== index) {
       return;
     }
 
     // Update selected action
-    selectedActions[action] = charIndex;
+    selectedActions[action] = index;
 
     // Disable all buttons for this character
-    document.querySelectorAll(`.fmk-btn[data-char="${charIndex}"]`).forEach(btn => {
-      btn.disabled = true;
-    });
+    const buttons = document.querySelectorAll(`.character-card:nth-child(${index + 1}) button`);
+    buttons.forEach(btn => btn.disabled = true);
 
     // Disable this action for other characters
-    document.querySelectorAll(`.fmk-btn[data-action="${action}"]`).forEach(btn => {
-      if (btn.dataset.char !== charIndex) {
+    document.querySelectorAll(`.${action}`).forEach(btn => {
+      if (btn.parentElement.parentElement !== buttons[0].parentElement.parentElement) {
         btn.disabled = true;
       }
     });
-
-    updateUrl();
   }
 
-  // Update URL with current game state
-  function updateUrl() {
-    const urlParams = new URLSearchParams();
+  function newGame() {
+    selectedActions = {};
+    currentCharacters = getRandomCharacters(selectedCategory);
+    displayCharacters(currentCharacters);
+  }
 
-    // Add category
-    if (selectedCategory !== 'all') {
-      urlParams.set('category', selectedCategory);
-    }
-
-    // Add characters and their actions
-    currentCharacters.forEach((character, index) => {
-      const action = Object.entries(selectedActions).find(([_, charIdx]) => charIdx === (index + 1).toString())?.[0];
-      if (action) {
-        urlParams.set(character.name.toLowerCase().replace(/\s+/g, ''), action);
-      }
-    });
-
-    // Update URL without reloading the page
-    const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
-    window.history.pushState({}, '', newUrl);
+  // Handle category change
+  function handleCategoryChange(event) {
+    selectedCategory = event.target.value;
+    newGame();
   }
 
   // Handle share button click
@@ -152,71 +121,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Handle category change
-  function handleCategoryChange(event) {
-    selectedCategory = event.target.value;
-    startNewGame();
-  }
-
-  // Load game state from URL
-  function loadGameState() {
-    const urlParams = new URLSearchParams(window.location.search);
-
-    // Get category from URL
-    const category = urlParams.get('category');
-    if (category) {
-      selectedCategory = category;
-      if (categorySelect) {
-        categorySelect.value = category;
-      }
-    }
-
-    // Get available characters
-    const availableCharacters = getAvailableCharacters();
-
-    // Get characters and actions from URL
-    const characters = [];
-    const actions = {};
-
-    urlParams.forEach((value, key) => {
-      if (key !== 'category') {
-        const character = availableCharacters.find(char =>
-          char.name.toLowerCase().replace(/\s+/g, '') === key
-        );
-        if (character) {
-          characters.push(character);
-          actions[value] = characters.length.toString();
-        }
-      }
-    });
-
-    if (characters.length === 3) {
-      currentCharacters = characters;
-      selectedActions = actions;
-      displayCharacters(currentCharacters);
-
-      // Restore button states
-      Object.entries(selectedActions).forEach(([action, charIndex]) => {
-        document.querySelectorAll(`.fmk-btn[data-action="${action}"]`).forEach(btn => {
-          if (btn.dataset.char !== charIndex) {
-            btn.disabled = true;
-          }
-        });
-      });
-    } else {
-      startNewGame();
-    }
-  }
-
   // Add event listeners
   categorySelect.addEventListener('change', handleCategoryChange);
-  refreshBtn.addEventListener('click', startNewGame);
+  refreshBtn.addEventListener('click', newGame);
   document.querySelectorAll('.fmk-btn').forEach(btn => {
     btn.addEventListener('click', handleAction);
   });
   copyLinkBtn.addEventListener('click', handleShare);
   copyUrlBtn.addEventListener('click', copyUrl);
 
-  // Initialize the game
+  // Make handleAction available globally
+  window.handleAction = handleAction;
+
+  // Start the game
   loadCharacterData();
 }); 

@@ -25,17 +25,13 @@ body {
   background: var(--bg-dark);
   color: var(--text-light);
   min-height: 100vh;
-  padding: 10px;
-  overflow: hidden;
+  padding: 20px;
 }
 
 .container {
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 10px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding: 20px;
 }
 
 h1 {
@@ -96,14 +92,11 @@ h1 {
   transform: rotate(180deg);
 }
 
-.characters-container {
+#characters {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-bottom: 20px;
-  flex: 1;
-  overflow-y: auto;
-  padding: 5px;
 }
 
 .character-card {
@@ -124,25 +117,16 @@ h1 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.emoji-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-  min-height: 100px;
-  flex: 1;
-}
-
 .emoji {
   font-size: 4rem;
   line-height: 1;
-  display: block;
+  margin: 10px 0;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-.character-card h2 {
-  margin-bottom: 15px;
+.name {
   font-size: 1.3rem;
+  margin: 10px 0;
   color: var(--text-light);
 }
 
@@ -150,9 +134,10 @@ h1 {
   display: flex;
   gap: 8px;
   justify-content: center;
+  margin-top: auto;
 }
 
-.fmk-btn {
+button {
   padding: 10px 15px;
   border: none;
   border-radius: var(--border-radius);
@@ -167,44 +152,25 @@ h1 {
   font-weight: 600;
 }
 
-.fmk-btn:not(:disabled):hover {
-  background: var(--primary-color);
+button:not(:disabled):hover {
   transform: translateY(-1px);
 }
 
-.fmk-btn:disabled {
+.fuck {
+  background: #ff6b6b;
+}
+
+.marry {
+  background: #4ecdc4;
+}
+
+.kill {
+  background: #2d3436;
+}
+
+button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  background: var(--border-color);
-}
-
-.share-section {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: auto;
-  padding: 15px 0;
-}
-
-.share-btn {
-  width: 45px;
-  height: 45px;
-  padding: 0;
-  background: var(--card-bg);
-  color: var(--text-light);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.share-btn:hover {
-  background: var(--primary-color);
-  transform: translateY(-2px);
 }
 
 @media (min-width: 768px) {
@@ -212,7 +178,7 @@ h1 {
     max-width: 600px;
   }
 
-  .characters-container {
+  #characters {
     flex-direction: row;
   }
 
