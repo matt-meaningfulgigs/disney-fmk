@@ -87,39 +87,32 @@ function handleAction(event: Event): void {
 }
 
 function updateShareLink(): void {
-    const shareLink = document.getElementById('share-link') as HTMLAnchorElement;
-    if (shareLink) {
-        const url = new URL(window.location.href);
-        url.searchParams.set('characters', currentCharacters.map(c => c.name).join(','));
-        url.searchParams.set('actions', JSON.stringify(selectedActions));
-        shareLink.href = url.toString();
-        shareLink.textContent = 'Share your choices';
-        // Update the URL in the browser without reloading
-        window.history.pushState({}, '', url.toString());
-    }
+  const url = new URL(window.location.href);
+  url.searchParams.set('characters', currentCharacters.map(c => c.name).join(','));
+  url.searchParams.set('actions', JSON.stringify(selectedActions));
+  window.history.pushState({}, '', url.toString());
 }
 
 function loadGameState(): void {
-    if (!characters) return;
-    
-    const urlParams = new URLSearchParams(window.location.search);
-    const characterNames = urlParams.get('characters')?.split(',') || [];
-    const actions = urlParams.get('actions') ? JSON.parse(urlParams.get('actions')!) : {};
-    
-    if (characterNames.length === 3) {
-        const allCharacters = getAvailableCharacters();
-        currentCharacters = characterNames
-            .map(name => allCharacters.find(c => c.name === name))
-            .filter((c): c is Character => c !== undefined);
-        
-        if (currentCharacters.length === 3) {
-            selectedActions = actions;
-            displayCharacters();
-            return;
-        }
-    }
-    
-    startNewGame();
+  if (!characters) return;
+  
+  const urlParams = new URLSearchParams(window.location.search);
+  const characterNames = urlParams.get('characters')?.split(',') || [];
+  const actions = urlParams.get('actions') ? JSON.parse(urlParams.get('actions')!) : {};
+  
+  const allCharacters = getAvailableCharacters();
+  if (characterNames.length === 3) {
+      currentCharacters = characterNames.map(name => 
+          allCharacters.find(c => c.name === name)
+      ).filter((c): c is Character => c !== undefined);
+      
+      if (currentCharacters.length === 3) {
+          selectedActions = actions;
+          displayCharacters();
+          return;
+      }
+  }
+  startNewGame();
 }
 
 // Initialize the game
