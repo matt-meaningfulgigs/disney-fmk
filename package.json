@@ -2,10 +2,10 @@
   "name": "disney-fmk",
   "version": "1.0.0",
   "description": "FMK but Disney",
-  "main": "src/public/index.html",
+  "main": "dist/index.html",
   "scripts": {
-    "build": "tsc",
-    "start": "npx serve src/public",
+    "build": "tsc && cp -r src/public/* dist/",
+    "start": "npx serve dist",
     "dev": "tsc --watch"
   },
   "keywords": [],
