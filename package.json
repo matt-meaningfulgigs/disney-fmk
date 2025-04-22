@@ -4,7 +4,7 @@
   "description": "FMK but Disney",
   "main": "dist/index.html",
   "scripts": {
-    "build": "tsc && cp -r src/public/* dist/",
+    "build": "tsc && cp -r src/public/* dist/ && cp -r src/data/* dist/data/",
     "start": "npx serve dist",
     "dev": "tsc --watch"
   },
