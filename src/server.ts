@@ -13,24 +13,9 @@ const charactersData = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'data', 'disneyCharacters.json'), 'utf-8')
 );
 
-// API endpoint to get random characters
+// API endpoint to get all characters
 app.get('/api/characters', (req, res) => {
-  const { categories } = req.query;
-  const selectedCategories = categories ? (categories as string).split(',') : ['princesses', 'villains', 'sidekicks', 'princes'];
-  
-  // Get all characters from selected categories
-  let allCharacters: any[] = [];
-  selectedCategories.forEach(category => {
-    if (charactersData[category]) {
-      allCharacters = allCharacters.concat(charactersData[category]);
-    }
-  });
-
-  // Shuffle and select 3 unique characters
-  const shuffled = allCharacters.sort(() => 0.5 - Math.random());
-  const selected = shuffled.slice(0, 3);
-
-  res.json(selected);
+  res.json(charactersData);
 });
 
 // Serve the main HTML file for all routes (SPA support)

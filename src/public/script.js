@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let selectedCategories = ['princesses', 'villains', 'sidekicks', 'princes'];
+  let selectedCategory = 'all';
   let selectedActions = {};
+  let currentCharacters = [];
 
   // Get DOM elements
   const newGameBtn = document.getElementById('newGame');
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const response = await fetch('/api/characters');
       characterData = await response.json();
-      startNewGame();
+      loadGameState();
     } catch (error) {
       console.error('Error loading character data:', error);
     }
@@ -25,14 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function startNewGame() {
     selectedActions = {};
     const availableCharacters = getAvailableCharacters();
-    const selectedCharacters = selectRandomCharacters(availableCharacters, 3);
-    displayCharacters(selectedCharacters);
+    currentCharacters = selectRandomCharacters(availableCharacters, 3);
+    displayCharacters(currentCharacters);
     updateShareLink();
   }
 
-  // Get characters from selected categories
+  // Get characters from selected category
   function getAvailableCharacters() {
-    return selectedCategories.flatMap(category => characterData[category] || []);
+    if (selectedCategory === 'all') {
+      return Object.values(characterData).flat();
+    }
+    return characterData[selectedCategory] || [];
   }
 
   // Select random characters
@@ -46,58 +50,52 @@ document.addEventListener('DOMContentLoaded', () => {
     characters.forEach((character, index) => {
       const emojiElement = document.getElementById(`char${index + 1}-emoji`);
       const nameElement = document.getElementById(`char${index + 1}-name`);
-      const selectElement = document.querySelector(`select[data-char="${index + 1}"]`);
+      const buttons = document.querySelectorAll(`.fmk-btn[data-char="${index + 1}"]`);
 
       emojiElement.textContent = character.emoji;
       nameElement.textContent = character.name;
-      selectElement.value = '';
-      selectElement.disabled = false;
+
+      buttons.forEach(btn => {
+        btn.disabled = false;
+      });
     });
   }
 
   // Handle action selection
-  function handleActionSelect(event) {
+  function handleAction(event) {
+    const action = event.target.dataset.action;
     const charIndex = event.target.dataset.char;
-    const action = event.target.value;
 
-    // Clear previous selection if any
-    if (selectedActions[action]) {
-      const prevSelect = document.querySelector(`select[data-char="${selectedActions[action]}"]`);
-      if (prevSelect) prevSelect.value = '';
+    // If this action is already selected for another character, return
+    if (selectedActions[action] && selectedActions[action] !== charIndex) {
+      return;
     }
 
-    // Update selection
-    if (action) {
-      selectedActions[action] = charIndex;
-    } else {
-      delete selectedActions[charIndex];
-    }
+    // Update selected action
+    selectedActions[action] = charIndex;
 
-    // Disable used actions in other selects
-    updateSelects();
-    updateShareLink();
-  }
-
-  // Update select dropdowns
-  function updateSelects() {
-    const selects = document.querySelectorAll('.action-select');
-    selects.forEach(select => {
-      const options = select.querySelectorAll('option');
-      options.forEach(option => {
-        if (option.value) {
-          option.disabled = selectedActions[option.value] && selectedActions[option.value] !== select.dataset.char;
-        }
-      });
+    // Disable all buttons for this character
+    document.querySelectorAll(`.fmk-btn[data-char="${charIndex}"]`).forEach(btn => {
+      btn.disabled = true;
     });
+
+    // Disable this action for other characters
+    document.querySelectorAll(`.fmk-btn[data-action="${action}"]`).forEach(btn => {
+      if (btn.dataset.char !== charIndex) {
+        btn.disabled = true;
+      }
+    });
+
+    updateShareLink();
   }
 
   // Update share link
   function updateShareLink() {
     const gameState = {
-      categories: selectedCategories,
-      characters: Array.from(document.querySelectorAll('.character-card')).map(card => ({
-        name: card.querySelector('h2').textContent,
-        action: card.querySelector('select').value
+      category: selectedCategory,
+      characters: currentCharacters.map((character, index) => ({
+        name: character.name,
+        action: Object.entries(selectedActions).find(([_, charIdx]) => charIdx === (index + 1).toString())?.[0] || ''
       }))
     };
 
@@ -135,14 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Handle category toggle
-  function handleCategoryToggle(event) {
-    const category = event.target.id;
-    if (event.target.checked) {
-      selectedCategories.push(category);
-    } else {
-      selectedCategories = selectedCategories.filter(c => c !== category);
-    }
+  // Handle category change
+  function handleCategoryChange(event) {
+    selectedCategory = event.target.value;
     startNewGame();
   }
 
@@ -154,30 +147,44 @@ document.addEventListener('DOMContentLoaded', () => {
     if (stateParam) {
       try {
         const gameState = JSON.parse(atob(stateParam));
-        selectedCategories = gameState.categories;
+        selectedCategory = gameState.category;
 
-        // Update category toggles
-        document.querySelectorAll('.toggle input').forEach(toggle => {
-          toggle.checked = selectedCategories.includes(toggle.id);
-        });
+        // Update category select
+        document.getElementById('categorySelect').value = selectedCategory;
 
-        // Display characters and their actions
-        gameState.characters.forEach((character, index) => {
-          const emojiElement = document.getElementById(`char${index + 1}-emoji`);
-          const nameElement = document.getElementById(`char${index + 1}-name`);
-          const selectElement = document.querySelector(`select[data-char="${index + 1}"]`);
+        // Get available characters
+        const availableCharacters = getAvailableCharacters();
 
-          emojiElement.textContent = characterData[selectedCategories[index % selectedCategories.length]]
-            .find(c => c.name === character.name)?.emoji || '';
-          nameElement.textContent = character.name;
-          selectElement.value = character.action;
+        // Find and display the characters from the game state
+        currentCharacters = gameState.characters.map(charState => {
+          return availableCharacters.find(char => char.name === charState.name);
+        }).filter(Boolean);
 
-          if (character.action) {
-            selectedActions[character.action] = (index + 1).toString();
-          }
-        });
+        if (currentCharacters.length === 3) {
+          displayCharacters(currentCharacters);
 
-        updateSelects();
+          // Restore actions
+          gameState.characters.forEach((charState, index) => {
+            if (charState.action) {
+              const actionBtn = document.querySelector(`.fmk-btn[data-char="${index + 1}"][data-action="${charState.action}"]`);
+              if (actionBtn) {
+                actionBtn.disabled = true;
+                selectedActions[charState.action] = (index + 1).toString();
+              }
+            }
+          });
+
+          // Disable used actions
+          Object.entries(selectedActions).forEach(([action, charIndex]) => {
+            document.querySelectorAll(`.fmk-btn[data-action="${action}"]`).forEach(btn => {
+              if (btn.dataset.char !== charIndex) {
+                btn.disabled = true;
+              }
+            });
+          });
+        } else {
+          startNewGame();
+        }
       } catch (error) {
         console.error('Error loading game state:', error);
         startNewGame();
@@ -188,14 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Event listeners
-  newGameBtn.addEventListener('click', startNewGame);
-  copyLinkBtn.addEventListener('click', handleShare);
-  document.querySelectorAll('.toggle input').forEach(toggle => {
-    toggle.addEventListener('change', handleCategoryToggle);
-  });
+  document.getElementById('categorySelect').addEventListener('change', handleCategoryChange);
   document.getElementById('refresh').addEventListener('click', startNewGame);
-  document.querySelectorAll('.action-select').forEach(select => {
-    select.addEventListener('change', handleActionSelect);
+  document.getElementById('copyLink').addEventListener('click', handleShare);
+  document.querySelectorAll('.fmk-btn').forEach(btn => {
+    btn.addEventListener('click', handleAction);
   });
 
   // Add touch feedback for mobile
@@ -214,4 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
     }
   }, { passive: false });
+
+  // Initialize
+  loadCharacterData();
 }); 

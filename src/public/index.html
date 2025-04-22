@@ -17,24 +17,13 @@
     <h1>Disney FMK</h1>
 
     <div class="controls">
-      <div class="category-toggles">
-        <label class="toggle">
-          <input type="checkbox" id="princesses" checked>
-          <span class="toggle-label">👸</span>
-        </label>
-        <label class="toggle">
-          <input type="checkbox" id="villains" checked>
-          <span class="toggle-label">👿</span>
-        </label>
-        <label class="toggle">
-          <input type="checkbox" id="sidekicks" checked>
-          <span class="toggle-label">🐾</span>
-        </label>
-        <label class="toggle">
-          <input type="checkbox" id="princes" checked>
-          <span class="toggle-label">🤴</span>
-        </label>
-      </div>
+      <select id="categorySelect" class="category-select">
+        <option value="all">All Categories</option>
+        <option value="princesses">Princesses</option>
+        <option value="villains">Villains</option>
+        <option value="sidekicks">Sidekicks</option>
+        <option value="princes">Princes</option>
+      </select>
       <button id="refresh" class="refresh-btn">🔄</button>
     </div>
 
@@ -44,41 +33,38 @@
           <span id="char1-emoji" class="emoji"></span>
         </div>
         <h2 id="char1-name"></h2>
-        <select class="action-select" data-char="1">
-          <option value="">Choose...</option>
-          <option value="fuck">Fuck</option>
-          <option value="marry">Marry</option>
-          <option value="kill">Kill</option>
-        </select>
+        <div class="buttons">
+          <button class="fmk-btn" data-action="fuck" data-char="1">Fuck</button>
+          <button class="fmk-btn" data-action="marry" data-char="1">Marry</button>
+          <button class="fmk-btn" data-action="kill" data-char="1">Kill</button>
+        </div>
       </div>
       <div class="character-card">
         <div class="emoji-container">
           <span id="char2-emoji" class="emoji"></span>
         </div>
         <h2 id="char2-name"></h2>
-        <select class="action-select" data-char="2">
-          <option value="">Choose...</option>
-          <option value="fuck">Fuck</option>
-          <option value="marry">Marry</option>
-          <option value="kill">Kill</option>
-        </select>
+        <div class="buttons">
+          <button class="fmk-btn" data-action="fuck" data-char="2">Fuck</button>
+          <button class="fmk-btn" data-action="marry" data-char="2">Marry</button>
+          <button class="fmk-btn" data-action="kill" data-char="2">Kill</button>
+        </div>
       </div>
       <div class="character-card">
         <div class="emoji-container">
           <span id="char3-emoji" class="emoji"></span>
         </div>
         <h2 id="char3-name"></h2>
-        <select class="action-select" data-char="3">
-          <option value="">Choose...</option>
-          <option value="fuck">Fuck</option>
-          <option value="marry">Marry</option>
-          <option value="kill">Kill</option>
-        </select>
+        <div class="buttons">
+          <button class="fmk-btn" data-action="fuck" data-char="3">Fuck</button>
+          <button class="fmk-btn" data-action="marry" data-char="3">Marry</button>
+          <button class="fmk-btn" data-action="kill" data-char="3">Kill</button>
+        </div>
       </div>
     </div>
 
     <div class="share-section">
-      <button id="copyLink" class="share-btn">Share</button>
+      <button id="copyLink" class="share-btn">📤</button>
     </div>
   </div>
   <script src="script.js"></script>
