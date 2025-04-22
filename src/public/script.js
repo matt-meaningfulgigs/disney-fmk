@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const characters = [];
-  const selectedActions = {};
-  let currentGameState = {};
+  let selectedCategories = ['princesses', 'villains', 'sidekicks', 'princes'];
+  let selectedActions = {};
 
   // Get DOM elements
   const newGameBtn = document.getElementById('newGame');
@@ -9,26 +8,194 @@ document.addEventListener('DOMContentLoaded', () => {
   const shareLinkInput = document.getElementById('shareLink');
   const categoryCheckboxes = document.querySelectorAll('.category-selector input[type="checkbox"]');
 
-  // Load game state from URL if present
-  const urlParams = new URLSearchParams(window.location.search);
-  const gameState = urlParams.get('state');
-  if (gameState) {
+  // Load character data
+  let characterData = {};
+
+  async function loadCharacterData() {
     try {
-      currentGameState = JSON.parse(atob(gameState));
-      loadGameState(currentGameState);
-    } catch (e) {
-      console.error('Invalid game state in URL');
+      const response = await fetch('/api/characters');
+      characterData = await response.json();
+      startNewGame();
+    } catch (error) {
+      console.error('Error loading character data:', error);
+    }
+  }
+
+  // Initialize the game
+  function startNewGame() {
+    selectedActions = {};
+    const availableCharacters = getAvailableCharacters();
+    const selectedCharacters = selectRandomCharacters(availableCharacters, 3);
+    displayCharacters(selectedCharacters);
+    updateShareLink();
+  }
+
+  // Get characters from selected categories
+  function getAvailableCharacters() {
+    return selectedCategories.flatMap(category => characterData[category] || []);
+  }
+
+  // Select random characters
+  function selectRandomCharacters(characters, count) {
+    const shuffled = [...characters].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  }
+
+  // Display characters
+  function displayCharacters(characters) {
+    characters.forEach((character, index) => {
+      const emojiElement = document.getElementById(`char${index + 1}-emoji`);
+      const nameElement = document.getElementById(`char${index + 1}-name`);
+      const selectElement = document.querySelector(`select[data-char="${index + 1}"]`);
+
+      emojiElement.textContent = character.emoji;
+      nameElement.textContent = character.name;
+      selectElement.value = '';
+      selectElement.disabled = false;
+    });
+  }
+
+  // Handle action selection
+  function handleActionSelect(event) {
+    const charIndex = event.target.dataset.char;
+    const action = event.target.value;
+
+    // Clear previous selection if any
+    if (selectedActions[action]) {
+      const prevSelect = document.querySelector(`select[data-char="${selectedActions[action]}"]`);
+      if (prevSelect) prevSelect.value = '';
+    }
+
+    // Update selection
+    if (action) {
+      selectedActions[action] = charIndex;
+    } else {
+      delete selectedActions[charIndex];
+    }
+
+    // Disable used actions in other selects
+    updateSelects();
+    updateShareLink();
+  }
+
+  // Update select dropdowns
+  function updateSelects() {
+    const selects = document.querySelectorAll('.action-select');
+    selects.forEach(select => {
+      const options = select.querySelectorAll('option');
+      options.forEach(option => {
+        if (option.value) {
+          option.disabled = selectedActions[option.value] && selectedActions[option.value] !== select.dataset.char;
+        }
+      });
+    });
+  }
+
+  // Update share link
+  function updateShareLink() {
+    const gameState = {
+      categories: selectedCategories,
+      characters: Array.from(document.querySelectorAll('.character-card')).map(card => ({
+        name: card.querySelector('h2').textContent,
+        action: card.querySelector('select').value
+      }))
+    };
+
+    const encodedState = btoa(JSON.stringify(gameState));
+    const shareUrl = `${window.location.origin}${window.location.pathname}?state=${encodedState}`;
+    return shareUrl;
+  }
+
+  // Handle share button click
+  async function handleShare() {
+    const shareUrl = updateShareLink();
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Disney FMK',
+          text: 'Check out my Disney FMK choices!',
+          url: shareUrl
+        });
+      } catch (error) {
+        console.error('Error sharing:', error);
+        copyToClipboard(shareUrl);
+      }
+    } else {
+      copyToClipboard(shareUrl);
+    }
+  }
+
+  // Copy to clipboard
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Link copied to clipboard!');
+    }).catch(err => {
+      console.error('Failed to copy:', err);
+    });
+  }
+
+  // Handle category toggle
+  function handleCategoryToggle(event) {
+    const category = event.target.id;
+    if (event.target.checked) {
+      selectedCategories.push(category);
+    } else {
+      selectedCategories = selectedCategories.filter(c => c !== category);
+    }
+    startNewGame();
+  }
+
+  // Load game state from URL
+  function loadGameState() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const stateParam = urlParams.get('state');
+
+    if (stateParam) {
+      try {
+        const gameState = JSON.parse(atob(stateParam));
+        selectedCategories = gameState.categories;
+
+        // Update category toggles
+        document.querySelectorAll('.toggle input').forEach(toggle => {
+          toggle.checked = selectedCategories.includes(toggle.id);
+        });
+
+        // Display characters and their actions
+        gameState.characters.forEach((character, index) => {
+          const emojiElement = document.getElementById(`char${index + 1}-emoji`);
+          const nameElement = document.getElementById(`char${index + 1}-name`);
+          const selectElement = document.querySelector(`select[data-char="${index + 1}"]`);
+
+          emojiElement.textContent = characterData[selectedCategories[index % selectedCategories.length]]
+            .find(c => c.name === character.name)?.emoji || '';
+          nameElement.textContent = character.name;
+          selectElement.value = character.action;
+
+          if (character.action) {
+            selectedActions[character.action] = (index + 1).toString();
+          }
+        });
+
+        updateSelects();
+      } catch (error) {
+        console.error('Error loading game state:', error);
+        startNewGame();
+      }
+    } else {
       startNewGame();
     }
-  } else {
-    startNewGame();
   }
 
   // Event listeners
   newGameBtn.addEventListener('click', startNewGame);
-  copyLinkBtn.addEventListener('click', shareGame);
-  document.querySelectorAll('.fmk-btn').forEach(btn => {
-    btn.addEventListener('click', handleAction);
+  copyLinkBtn.addEventListener('click', handleShare);
+  document.querySelectorAll('.toggle input').forEach(toggle => {
+    toggle.addEventListener('change', handleCategoryToggle);
+  });
+  document.getElementById('refresh').addEventListener('click', startNewGame);
+  document.querySelectorAll('.action-select').forEach(select => {
+    select.addEventListener('change', handleActionSelect);
   });
 
   // Add touch feedback for mobile
@@ -40,149 +207,6 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.style.transform = 'scale(1)';
     });
   });
-
-  async function startNewGame() {
-    // Get selected categories
-    const selectedCategories = Array.from(categoryCheckboxes)
-      .filter(checkbox => checkbox.checked)
-      .map(checkbox => checkbox.id);
-
-    try {
-      const response = await fetch(`/api/characters?categories=${selectedCategories.join(',')}`);
-      const data = await response.json();
-
-      // Update UI with new characters
-      data.forEach((character, index) => {
-        const imgElement = document.getElementById(`char${index + 1}-img`);
-        const nameElement = document.getElementById(`char${index + 1}-name`);
-
-        imgElement.src = `/images/${character.image}`;
-        nameElement.textContent = character.name;
-
-        // Reset buttons
-        document.querySelectorAll(`.fmk-btn[data-char="${index + 1}"]`).forEach(btn => {
-          btn.disabled = false;
-        });
-      });
-
-      // Reset game state
-      characters.length = 0;
-      characters.push(...data);
-      selectedActions.fuck = null;
-      selectedActions.marry = null;
-      selectedActions.kill = null;
-
-      // Update URL
-      updateShareLink();
-    } catch (error) {
-      console.error('Error fetching characters:', error);
-    }
-  }
-
-  function handleAction(event) {
-    const action = event.target.dataset.action;
-    const charIndex = event.target.dataset.char - 1;
-
-    // If this action is already selected for another character, return
-    if (selectedActions[action] !== null && selectedActions[action] !== charIndex) {
-      return;
-    }
-
-    // Update selected action
-    selectedActions[action] = charIndex;
-
-    // Disable all buttons for this character
-    document.querySelectorAll(`.fmk-btn[data-char="${charIndex + 1}"]`).forEach(btn => {
-      btn.disabled = true;
-    });
-
-    // Disable this action for other characters
-    document.querySelectorAll(`.fmk-btn[data-action="${action}"]`).forEach(btn => {
-      if (btn.dataset.char !== (charIndex + 1).toString()) {
-        btn.disabled = true;
-      }
-    });
-
-    // Update URL
-    updateShareLink();
-  }
-
-  function updateShareLink() {
-    const gameState = {
-      characters: characters.map(char => char.name),
-      actions: selectedActions
-    };
-
-    const baseUrl = window.location.origin + window.location.pathname;
-    const stateParam = btoa(JSON.stringify(gameState));
-    const shareUrl = `${baseUrl}?state=${stateParam}`;
-
-    shareLinkInput.value = shareUrl;
-  }
-
-  function shareGame() {
-    const shareUrl = shareLinkInput.value;
-
-    // Check if we're on iOS and can use the native share sheet
-    if (navigator.share) {
-      navigator.share({
-        title: 'Disney FMK',
-        text: 'Check out my Disney FMK choices!',
-        url: shareUrl
-      }).catch(err => {
-        console.error('Error sharing:', err);
-        fallbackShare(shareUrl);
-      });
-    } else {
-      fallbackShare(shareUrl);
-    }
-  }
-
-  function fallbackShare(shareUrl) {
-    // Fallback for browsers that don't support the Web Share API
-    shareLinkInput.select();
-    document.execCommand('copy');
-
-    // Show feedback
-    const originalText = copyLinkBtn.textContent;
-    copyLinkBtn.textContent = 'Copied!';
-    setTimeout(() => {
-      copyLinkBtn.textContent = originalText;
-    }, 2000);
-  }
-
-  function loadGameState(state) {
-    // Load characters
-    state.characters.forEach((characterName, index) => {
-      const imgElement = document.getElementById(`char${index + 1}-img`);
-      const nameElement = document.getElementById(`char${index + 1}-name`);
-
-      // Find character in our data
-      const character = characters.find(char => char.name === characterName);
-      if (character) {
-        imgElement.src = `/images/${character.image}`;
-        nameElement.textContent = character.name;
-      }
-    });
-
-    // Load actions
-    Object.entries(state.actions).forEach(([action, charIndex]) => {
-      if (charIndex !== null) {
-        selectedActions[action] = charIndex;
-
-        // Disable buttons
-        document.querySelectorAll(`.fmk-btn[data-char="${charIndex + 1}"]`).forEach(btn => {
-          btn.disabled = true;
-        });
-
-        document.querySelectorAll(`.fmk-btn[data-action="${action}"]`).forEach(btn => {
-          if (btn.dataset.char !== (charIndex + 1).toString()) {
-            btn.disabled = true;
-          }
-        });
-      }
-    });
-  }
 
   // Prevent pull-to-refresh on mobile
   document.body.addEventListener('touchmove', (e) => {
