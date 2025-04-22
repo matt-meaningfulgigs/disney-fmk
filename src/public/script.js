@@ -56,8 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const nameElement = document.getElementById(`char${index + 1}-name`);
       const buttons = document.querySelectorAll(`.fmk-btn[data-char="${index + 1}"]`);
 
-      if (emojiElement && character.emoji) {
+      console.log(`Setting emoji for ${character.name}:`, character.emoji);
+      console.log('Emoji element:', emojiElement);
+
+      if (emojiElement) {
         emojiElement.textContent = character.emoji;
+        emojiElement.style.fontSize = '3.5rem';
+        emojiElement.style.display = 'block';
       }
 
       if (nameElement) {
