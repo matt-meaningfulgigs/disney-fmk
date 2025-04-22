@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const newGameBtn = document.getElementById('newGame');
   const copyLinkBtn = document.getElementById('copyLink');
   const shareLinkInput = document.getElementById('shareLink');
-  const categoryCheckboxes = document.querySelectorAll('.category-selector input[type="checkbox"]');
+  const categorySelect = document.getElementById('categorySelect');
 
   // Load character data
   let characterData = {};
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const response = await fetch('/api/characters');
       characterData = await response.json();
+      console.log('Loaded character data:', characterData); // Debug log
       loadGameState();
     } catch (error) {
       console.error('Error loading character data:', error);
@@ -26,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function startNewGame() {
     selectedActions = {};
     const availableCharacters = getAvailableCharacters();
+    console.log('Available characters:', availableCharacters); // Debug log
     currentCharacters = selectRandomCharacters(availableCharacters, 3);
+    console.log('Selected characters:', currentCharacters); // Debug log
     displayCharacters(currentCharacters);
     updateShareLink();
   }
@@ -34,7 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Get characters from selected category
   function getAvailableCharacters() {
     if (selectedCategory === 'all') {
-      return Object.values(characterData).flat();
+      const allCharacters = Object.values(characterData).flat();
+      console.log('All characters:', allCharacters); // Debug log
+      return allCharacters;
     }
     return characterData[selectedCategory] || [];
   }
@@ -47,13 +52,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Display characters
   function displayCharacters(characters) {
+    console.log('Displaying characters:', characters); // Debug log
     characters.forEach((character, index) => {
       const emojiElement = document.getElementById(`char${index + 1}-emoji`);
       const nameElement = document.getElementById(`char${index + 1}-name`);
       const buttons = document.querySelectorAll(`.fmk-btn[data-char="${index + 1}"]`);
 
-      emojiElement.textContent = character.emoji;
-      nameElement.textContent = character.name;
+      console.log(`Character ${index + 1}:`, character); // Debug log
+      console.log(`Emoji element for ${character.name}:`, emojiElement); // Debug log
+      console.log(`Setting emoji for ${character.name}:`, character.emoji); // Debug log
+
+      if (emojiElement && character.emoji) {
+        emojiElement.textContent = character.emoji;
+      } else {
+        console.error(`Failed to set emoji for ${character.name}`);
+      }
+
+      if (nameElement) {
+        nameElement.textContent = character.name;
+      }
 
       buttons.forEach(btn => {
         btn.disabled = false;
@@ -136,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle category change
   function handleCategoryChange(event) {
     selectedCategory = event.target.value;
+    console.log('Category changed to:', selectedCategory); // Debug log
     startNewGame();
   }
 
@@ -148,9 +166,12 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const gameState = JSON.parse(atob(stateParam));
         selectedCategory = gameState.category;
+        console.log('Loading game state:', gameState); // Debug log
 
         // Update category select
-        document.getElementById('categorySelect').value = selectedCategory;
+        if (categorySelect) {
+          categorySelect.value = selectedCategory;
+        }
 
         // Get available characters
         const availableCharacters = getAvailableCharacters();
@@ -159,6 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
         currentCharacters = gameState.characters.map(charState => {
           return availableCharacters.find(char => char.name === charState.name);
         }).filter(Boolean);
+
+        console.log('Restored characters:', currentCharacters); // Debug log
 
         if (currentCharacters.length === 3) {
           displayCharacters(currentCharacters);
@@ -194,31 +217,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Event listeners
-  document.getElementById('categorySelect').addEventListener('change', handleCategoryChange);
-  document.getElementById('refresh').addEventListener('click', startNewGame);
-  document.getElementById('copyLink').addEventListener('click', handleShare);
+  // Add event listeners
+  categorySelect.addEventListener('change', handleCategoryChange);
   document.querySelectorAll('.fmk-btn').forEach(btn => {
     btn.addEventListener('click', handleAction);
   });
+  copyLinkBtn.addEventListener('click', handleShare);
 
-  // Add touch feedback for mobile
-  document.querySelectorAll('button').forEach(btn => {
-    btn.addEventListener('touchstart', () => {
-      btn.style.transform = 'scale(0.98)';
-    });
-    btn.addEventListener('touchend', () => {
-      btn.style.transform = 'scale(1)';
-    });
-  });
-
-  // Prevent pull-to-refresh on mobile
-  document.body.addEventListener('touchmove', (e) => {
-    if (e.touches.length > 1) {
-      e.preventDefault();
-    }
-  }, { passive: false });
-
-  // Initialize
+  // Initialize the game
   loadCharacterData();
 }); 

@@ -24,13 +24,13 @@
         <option value="sidekicks">Sidekicks</option>
         <option value="princes">Princes</option>
       </select>
-      <button id="refresh" class="refresh-btn">🔄</button>
+      <button id="refresh" class="refresh-btn" aria-label="New Game">🔄</button>
     </div>
 
     <div class="characters-container">
       <div class="character-card">
         <div class="emoji-container">
-          <span id="char1-emoji" class="emoji"></span>
+          <span id="char1-emoji" class="emoji" role="img" aria-label="Character 1"></span>
         </div>
         <h2 id="char1-name"></h2>
         <div class="buttons">
@@ -41,7 +41,7 @@
       </div>
       <div class="character-card">
         <div class="emoji-container">
-          <span id="char2-emoji" class="emoji"></span>
+          <span id="char2-emoji" class="emoji" role="img" aria-label="Character 2"></span>
         </div>
         <h2 id="char2-name"></h2>
         <div class="buttons">
@@ -52,7 +52,7 @@
       </div>
       <div class="character-card">
         <div class="emoji-container">
-          <span id="char3-emoji" class="emoji"></span>
+          <span id="char3-emoji" class="emoji" role="img" aria-label="Character 3"></span>
         </div>
         <h2 id="char3-name"></h2>
         <div class="buttons">
@@ -64,7 +64,7 @@
     </div>
 
     <div class="share-section">
-      <button id="copyLink" class="share-btn">📤</button>
+      <button id="copyLink" class="share-btn" aria-label="Share">📤</button>
     </div>
   </div>
   <script src="script.js"></script>

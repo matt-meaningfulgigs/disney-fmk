@@ -15,6 +15,7 @@ const charactersData = JSON.parse(
 
 // API endpoint to get all characters
 app.get('/api/characters', (req, res) => {
+  console.log('Sending character data:', charactersData); // Debug log
   res.json(charactersData);
 });
 
