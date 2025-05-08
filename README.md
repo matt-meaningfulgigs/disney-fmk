@@ -1,6 +1,6 @@
-# Kingdom of FMK
+# Kingdom of FMK (Called this so I don't get sued)
 
-A modern, interactive web application that puts a playful twist on the classic "Fuck, Marry, Kill" game, featuring a carefully curated selection of characters from popular media. Built with TypeScript, Vite, and modern web technologies.
+A modern, interactive web application that puts a playful twist on the classic "Fuck, Marry, Kill" game, featuring a carefully curated selection of characters from popular media from an unnamed giant corporation. Built with TypeScript, Vite, and modern web technologies.
 
 > Made by Matt, for Jan and her friends to use once and forget about. I spent way too much time on this, but hey, at least it looks pretty! 😅
 
@@ -96,30 +96,3 @@ Example URL:
 ```
 https://yourusername.github.io/disney-fmk/?char1=id1,fuck&char2=id2,marry&char3=id3,kill&gender=female&category=Movies
 ```
-
-## 🎯 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Built with [Vite](https://vitejs.dev/)
-- Deployed with [GitHub Pages](https://pages.github.com/)
-- Icons from [Material Icons](https://fonts.google.com/icons)
-- Made with love, caffeine, and questionable life choices
-
-## 📞 Support
-
-For support, please open an issue in the GitHub repository or contact the maintainers. But seriously, it's just a game - if it breaks, just refresh the page! 😉
-
----
-
-Built with ❤️ (and probably too much time) by Matt 
