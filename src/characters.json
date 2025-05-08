@@ -2257,5 +2257,2345 @@
       "whiskers": "Long",
       "eyes": "Yellow"
     }
+  },
+  {
+    "id": "r2d2",
+    "name": "R2-D2",
+    "emoji": "🤖",
+    "category": "Star Wars",
+    "gender": "robot",
+    "media": {
+      "title": "Star Wars",
+      "year": 1977,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "3'6\"",
+      "build": "Cylindrical",
+      "color": "White and Blue",
+      "eyes": "Red",
+      "style": "Astro Droid"
+    }
+  },
+  {
+    "id": "c3po",
+    "name": "C-3PO",
+    "emoji": "🤖",
+    "category": "Star Wars",
+    "gender": "robot",
+    "media": {
+      "title": "Star Wars",
+      "year": 1977,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "5'9\"",
+      "build": "Humanoid",
+      "color": "Gold",
+      "eyes": "Yellow",
+      "style": "Protocol Droid"
+    }
+  },
+  {
+    "id": "bb8",
+    "name": "BB-8",
+    "emoji": "🤖",
+    "category": "Star Wars",
+    "gender": "robot",
+    "media": {
+      "title": "Star Wars",
+      "year": 2015,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "2'0\"",
+      "build": "Spherical",
+      "color": "White and Orange",
+      "eyes": "Black",
+      "style": "Astro Droid"
+    }
+  },
+  {
+    "id": "homer",
+    "name": "Homer Simpson",
+    "emoji": "👨",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 39,
+      "height": "6'0\"",
+      "build": "Overweight",
+      "hair": "None",
+      "eyes": "Blue",
+      "style": "Nuclear Safety Inspector"
+    }
+  },
+  {
+    "id": "marge",
+    "name": "Marge Simpson",
+    "emoji": "👩",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 34,
+      "height": "5'10\"",
+      "build": "Slim",
+      "hair": "Blue",
+      "eyes": "Blue",
+      "style": "Housewife"
+    }
+  },
+  {
+    "id": "spider-man",
+    "name": "Spider-Man",
+    "emoji": "🕷️",
+    "category": "Marvel",
+    "gender": "male",
+    "media": {
+      "title": "Marvel",
+      "year": 1962,
+      "type": "comic"
+    },
+    "stats": {
+      "age": 23,
+      "height": "5'10\"",
+      "build": "Athletic",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Web-Slinger"
+    }
+  },
+  {
+    "id": "iron-man",
+    "name": "Iron Man",
+    "emoji": "🤖",
+    "category": "Marvel",
+    "gender": "male",
+    "media": {
+      "title": "Marvel",
+      "year": 1963,
+      "type": "comic"
+    },
+    "stats": {
+      "age": 53,
+      "height": "6'1\"",
+      "build": "Athletic",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Tech Genius"
+    }
+  },
+  {
+    "id": "black-widow",
+    "name": "Black Widow",
+    "emoji": "🕷️",
+    "category": "Marvel",
+    "gender": "female",
+    "media": {
+      "title": "Marvel",
+      "year": 1964,
+      "type": "comic"
+    },
+    "stats": {
+      "age": 38,
+      "height": "5'7\"",
+      "build": "Athletic",
+      "hair": "Red",
+      "eyes": "Green",
+      "style": "Spy"
+    }
+  },
+  {
+    "id": "deadpool",
+    "name": "Deadpool",
+    "emoji": "🎭",
+    "category": "Marvel",
+    "gender": "male",
+    "media": {
+      "title": "Marvel",
+      "year": 1991,
+      "type": "comic"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "6'2\"",
+      "build": "Athletic",
+      "hair": "None",
+      "eyes": "Brown",
+      "style": "Mercenary"
+    }
+  },
+  {
+    "id": "wolverine",
+    "name": "Wolverine",
+    "emoji": "🐺",
+    "category": "Marvel",
+    "gender": "male",
+    "media": {
+      "title": "Marvel",
+      "year": 1974,
+      "type": "comic"
+    },
+    "stats": {
+      "age": "200+",
+      "height": "5'3\"",
+      "build": "Muscular",
+      "hair": "Black",
+      "eyes": "Blue",
+      "style": "Feral"
+    }
+  },
+  {
+    "id": "storm",
+    "name": "Storm",
+    "emoji": "⛈️",
+    "category": "Marvel",
+    "gender": "female",
+    "media": {
+      "title": "Marvel",
+      "year": 1975,
+      "type": "comic"
+    },
+    "stats": {
+      "age": 30,
+      "height": "5'11\"",
+      "build": "Athletic",
+      "hair": "White",
+      "eyes": "Blue",
+      "style": "Weather Goddess"
+    }
+  },
+  {
+    "id": "groot",
+    "name": "Groot",
+    "emoji": "🌳",
+    "category": "Marvel",
+    "gender": "plant",
+    "media": {
+      "title": "Marvel",
+      "year": 1960,
+      "type": "comic"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "7'0\"",
+      "build": "Tree-like",
+      "bark": "Brown",
+      "eyes": "Black",
+      "style": "Flora Colossus"
+    }
+  },
+  {
+    "id": "rocket",
+    "name": "Rocket Raccoon",
+    "emoji": "🦝",
+    "category": "Marvel",
+    "gender": "raccoon",
+    "media": {
+      "title": "Marvel",
+      "year": 1976,
+      "type": "comic"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "3'0\"",
+      "build": "Small",
+      "fur": "Brown",
+      "eyes": "Black",
+      "style": "Tactical Genius"
+    }
+  },
+  {
+    "id": "thanos",
+    "name": "Thanos",
+    "emoji": "👊",
+    "category": "Marvel",
+    "gender": "male",
+    "media": {
+      "title": "Marvel",
+      "year": 1973,
+      "type": "comic"
+    },
+    "stats": {
+      "age": "1000+",
+      "height": "6'7\"",
+      "build": "Massive",
+      "skin": "Purple",
+      "eyes": "Red",
+      "style": "Mad Titan"
+    }
+  },
+  {
+    "id": "loki",
+    "name": "Loki",
+    "emoji": "🦌",
+    "category": "Marvel",
+    "gender": "fluid",
+    "media": {
+      "title": "Marvel",
+      "year": 1949,
+      "type": "comic"
+    },
+    "stats": {
+      "age": "1000+",
+      "height": "6'4\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Green",
+      "style": "Trickster"
+    }
+  },
+  {
+    "id": "bart",
+    "name": "Bart Simpson",
+    "emoji": "👦",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 10,
+      "height": "4'0\"",
+      "build": "Slim",
+      "hair": "Yellow",
+      "eyes": "Blue",
+      "style": "Mischievous"
+    }
+  },
+  {
+    "id": "lisa",
+    "name": "Lisa Simpson",
+    "emoji": "👧",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 8,
+      "height": "3'8\"",
+      "build": "Slim",
+      "hair": "Yellow",
+      "eyes": "Blue",
+      "style": "Intellectual"
+    }
+  },
+  {
+    "id": "maggie",
+    "name": "Maggie Simpson",
+    "emoji": "👶",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 1,
+      "height": "2'0\"",
+      "build": "Baby",
+      "hair": "Yellow",
+      "eyes": "Blue",
+      "style": "Pacifier"
+    }
+  },
+  {
+    "id": "kylo-ren",
+    "name": "Kylo Ren",
+    "emoji": "⚔️",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 2015,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 29,
+      "height": "6'2\"",
+      "build": "Athletic",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Dark Side"
+    }
+  },
+  {
+    "id": "rey",
+    "name": "Rey",
+    "emoji": "⚔️",
+    "category": "Star Wars",
+    "gender": "female",
+    "media": {
+      "title": "Star Wars",
+      "year": 2015,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 19,
+      "height": "5'7\"",
+      "build": "Athletic",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Scavenger"
+    }
+  },
+  {
+    "id": "baby-yoda",
+    "name": "Grogu",
+    "emoji": "👶",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 2019,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 50,
+      "height": "1'0\"",
+      "build": "Small",
+      "skin": "Green",
+      "eyes": "Black",
+      "style": "Force Sensitive"
+    }
+  },
+  {
+    "id": "mando",
+    "name": "Din Djarin",
+    "emoji": "🪖",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 2019,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 35,
+      "height": "6'0\"",
+      "build": "Athletic",
+      "armor": "Beskar",
+      "eyes": "Brown",
+      "style": "Bounty Hunter"
+    }
+  },
+  {
+    "id": "vader",
+    "name": "Darth Vader",
+    "emoji": "⚔️",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1977,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 45,
+      "height": "6'7\"",
+      "build": "Cybernetic",
+      "armor": "Black",
+      "eyes": "Yellow",
+      "style": "Sith Lord"
+    }
+  },
+  {
+    "id": "leia",
+    "name": "Princess Leia",
+    "emoji": "👑",
+    "category": "Star Wars",
+    "gender": "female",
+    "media": {
+      "title": "Star Wars",
+      "year": 1977,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 19,
+      "height": "5'1\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Rebel Leader"
+    }
+  },
+  {
+    "id": "luke",
+    "name": "Luke Skywalker",
+    "emoji": "⚔️",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1977,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 19,
+      "height": "5'7\"",
+      "build": "Athletic",
+      "hair": "Blonde",
+      "eyes": "Blue",
+      "style": "Jedi Knight"
+    }
+  },
+  {
+    "id": "han",
+    "name": "Han Solo",
+    "emoji": "🪖",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1977,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 29,
+      "height": "6'0\"",
+      "build": "Athletic",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Smuggler"
+    }
+  },
+  {
+    "id": "chewie",
+    "name": "Chewbacca",
+    "emoji": "🐻",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1977,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 200,
+      "height": "7'6\"",
+      "build": "Muscular",
+      "fur": "Brown",
+      "eyes": "Blue",
+      "style": "Wookiee"
+    }
+  },
+  {
+    "id": "yoda",
+    "name": "Yoda",
+    "emoji": "👽",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 900,
+      "height": "2'2\"",
+      "build": "Small",
+      "skin": "Green",
+      "eyes": "Brown",
+      "style": "Jedi Master"
+    }
+  },
+  {
+    "id": "boba",
+    "name": "Boba Fett",
+    "emoji": "🪖",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 36,
+      "height": "6'0\"",
+      "build": "Athletic",
+      "armor": "Mandalorian",
+      "eyes": "Brown",
+      "style": "Bounty Hunter"
+    }
+  },
+  {
+    "id": "jabba",
+    "name": "Jabba the Hutt",
+    "emoji": "🐌",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 600,
+      "height": "3'9\"",
+      "build": "Massive",
+      "skin": "Green",
+      "eyes": "Yellow",
+      "style": "Crime Lord"
+    }
+  },
+  {
+    "id": "jabba-dancer",
+    "name": "Oola",
+    "emoji": "💃",
+    "category": "Star Wars",
+    "gender": "female",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 20,
+      "height": "5'6\"",
+      "build": "Slim",
+      "skin": "Green",
+      "eyes": "Green",
+      "style": "Dancer"
+    }
+  },
+  {
+    "id": "jabba-dancer2",
+    "name": "Bib Fortuna",
+    "emoji": "👽",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 50,
+      "height": "6'2\"",
+      "build": "Slim",
+      "skin": "Pale",
+      "eyes": "White",
+      "style": "Majordomo"
+    }
+  },
+  {
+    "id": "jabba-dancer3",
+    "name": "Salacious B. Crumb",
+    "emoji": "🐒",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 10,
+      "height": "1'0\"",
+      "build": "Small",
+      "fur": "Brown",
+      "eyes": "Black",
+      "style": "Jester"
+    }
+  },
+  {
+    "id": "jabba-dancer4",
+    "name": "Sy Snootles",
+    "emoji": "🎤",
+    "category": "Star Wars",
+    "gender": "female",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 30,
+      "height": "5'8\"",
+      "build": "Slim",
+      "skin": "Pink",
+      "eyes": "Black",
+      "style": "Singer"
+    }
+  },
+  {
+    "id": "jabba-dancer5",
+    "name": "Max Rebo",
+    "emoji": "🎹",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 40,
+      "height": "3'0\"",
+      "build": "Round",
+      "skin": "Blue",
+      "eyes": "Black",
+      "style": "Musician"
+    }
+  },
+  {
+    "id": "jabba-dancer6",
+    "name": "Droopy McCool",
+    "emoji": "🎷",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 35,
+      "height": "6'0\"",
+      "build": "Slim",
+      "skin": "Green",
+      "eyes": "Black",
+      "style": "Musician"
+    }
+  },
+  {
+    "id": "jabba-dancer7",
+    "name": "Rystáll",
+    "emoji": "💃",
+    "category": "Star Wars",
+    "gender": "female",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 25,
+      "height": "5'6\"",
+      "build": "Slim",
+      "skin": "Blue",
+      "eyes": "Black",
+      "style": "Dancer"
+    }
+  },
+  {
+    "id": "jabba-dancer8",
+    "name": "Lyn Me",
+    "emoji": "💃",
+    "category": "Star Wars",
+    "gender": "female",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 22,
+      "height": "5'5\"",
+      "build": "Slim",
+      "skin": "Green",
+      "eyes": "Black",
+      "style": "Dancer"
+    }
+  },
+  {
+    "id": "jabba-dancer9",
+    "name": "Greeata",
+    "emoji": "💃",
+    "category": "Star Wars",
+    "gender": "female",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 20,
+      "height": "5'4\"",
+      "build": "Slim",
+      "skin": "Green",
+      "eyes": "Black",
+      "style": "Dancer"
+    }
+  },
+  {
+    "id": "jabba-dancer10",
+    "name": "Rappertunie",
+    "emoji": "💃",
+    "category": "Star Wars",
+    "gender": "female",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 21,
+      "height": "5'3\"",
+      "build": "Slim",
+      "skin": "Green",
+      "eyes": "Black",
+      "style": "Dancer"
+    }
+  },
+  {
+    "id": "grandpa-simpson",
+    "name": "Abraham Simpson",
+    "emoji": "👴",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 83,
+      "height": "5'8\"",
+      "build": "Frail",
+      "hair": "White",
+      "eyes": "Blue",
+      "style": "Retired"
+    }
+  },
+  {
+    "id": "ned-flanders",
+    "name": "Ned Flanders",
+    "emoji": "🙏",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 60,
+      "height": "6'0\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Religious"
+    }
+  },
+  {
+    "id": "maude-flanders",
+    "name": "Maude Flanders",
+    "emoji": "👩",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 58,
+      "height": "5'6\"",
+      "build": "Slim",
+      "hair": "Red",
+      "eyes": "Blue",
+      "style": "Religious"
+    }
+  },
+  {
+    "id": "rod-flanders",
+    "name": "Rod Flanders",
+    "emoji": "👦",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 10,
+      "height": "4'0\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Religious"
+    }
+  },
+  {
+    "id": "todd-flanders",
+    "name": "Todd Flanders",
+    "emoji": "👦",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 8,
+      "height": "3'8\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Religious"
+    }
+  },
+  {
+    "id": "moe-szyslak",
+    "name": "Moe Szyslak",
+    "emoji": "🍺",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 45,
+      "height": "5'10\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Bartender"
+    }
+  },
+  {
+    "id": "barney-gumble",
+    "name": "Barney Gumble",
+    "emoji": "🍺",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 40,
+      "height": "6'0\"",
+      "build": "Overweight",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Alcoholic"
+    }
+  },
+  {
+    "id": "apu-nahasapeemapetilon",
+    "name": "Apu Nahasapeemapetilon",
+    "emoji": "🏪",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 36,
+      "height": "5'8\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Convenience Store Owner"
+    }
+  },
+  {
+    "id": "manjula-nahasapeemapetilon",
+    "name": "Manjula Nahasapeemapetilon",
+    "emoji": "👩",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 34,
+      "height": "5'4\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Mother of Octuplets"
+    }
+  },
+  {
+    "id": "chief-wiggum",
+    "name": "Clancy Wiggum",
+    "emoji": "👮",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 45,
+      "height": "5'10\"",
+      "build": "Overweight",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Police Chief"
+    }
+  },
+  {
+    "id": "ralph-wiggum",
+    "name": "Ralph Wiggum",
+    "emoji": "👦",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 10,
+      "height": "4'0\"",
+      "build": "Chubby",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Special Needs"
+    }
+  },
+  {
+    "id": "sarah-wiggum",
+    "name": "Sarah Wiggum",
+    "emoji": "👩",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 42,
+      "height": "5'6\"",
+      "build": "Overweight",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Police Wife"
+    }
+  },
+  {
+    "id": "principal-skinner",
+    "name": "Seymour Skinner",
+    "emoji": "👨‍🏫",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 44,
+      "height": "5'9\"",
+      "build": "Slim",
+      "hair": "Gray",
+      "eyes": "Brown",
+      "style": "Principal"
+    }
+  },
+  {
+    "id": "agnes-skinner",
+    "name": "Agnes Skinner",
+    "emoji": "👵",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 75,
+      "height": "5'2\"",
+      "build": "Slim",
+      "hair": "Gray",
+      "eyes": "Blue",
+      "style": "Overbearing Mother"
+    }
+  },
+  {
+    "id": "edna-krabappel",
+    "name": "Edna Krabappel",
+    "emoji": "👩‍🏫",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 42,
+      "height": "5'7\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Teacher"
+    }
+  },
+  {
+    "id": "willie-groundskeeper",
+    "name": "Groundskeeper Willie",
+    "emoji": "🧹",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 45,
+      "height": "5'11\"",
+      "build": "Muscular",
+      "hair": "Red",
+      "eyes": "Blue",
+      "style": "Groundskeeper"
+    }
+  },
+  {
+    "id": "frank-grimes",
+    "name": "Frank Grimes",
+    "emoji": "👨‍💼",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'10\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Nuclear Safety Inspector"
+    }
+  },
+  {
+    "id": "mr-burns",
+    "name": "Charles Montgomery Burns",
+    "emoji": "💰",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 104,
+      "height": "5'2\"",
+      "build": "Slim",
+      "hair": "None",
+      "eyes": "Black",
+      "style": "Billionaire"
+    }
+  },
+  {
+    "id": "waylon-smithers",
+    "name": "Waylon Smithers",
+    "emoji": "👨‍💼",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 40,
+      "height": "5'8\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Executive Assistant"
+    }
+  },
+  {
+    "id": "lenny-leonard",
+    "name": "Lenny Leonard",
+    "emoji": "👨‍🔬",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 38,
+      "height": "5'10\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Nuclear Technician"
+    }
+  },
+  {
+    "id": "carl-carlson",
+    "name": "Carl Carlson",
+    "emoji": "👨‍🔬",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 38,
+      "height": "5'11\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Nuclear Technician"
+    }
+  },
+  {
+    "id": "milhouse-van-houten",
+    "name": "Milhouse Van Houten",
+    "emoji": "👦",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 10,
+      "height": "4'0\"",
+      "build": "Slim",
+      "hair": "Blue",
+      "eyes": "Blue",
+      "style": "Best Friend"
+    }
+  },
+  {
+    "id": "luann-van-houten",
+    "name": "Luann Van Houten",
+    "emoji": "👩",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'5\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Divorced Mother"
+    }
+  },
+  {
+    "id": "kirk-van-houten",
+    "name": "Kirk Van Houten",
+    "emoji": "👨",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'8\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Divorced Father"
+    }
+  },
+  {
+    "id": "sideshow-bob",
+    "name": "Robert Underdunk Terwilliger",
+    "emoji": "🎭",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 45,
+      "height": "6'2\"",
+      "build": "Slim",
+      "hair": "Red",
+      "eyes": "Blue",
+      "style": "Criminal Mastermind"
+    }
+  },
+  {
+    "id": "sideshow-mel",
+    "name": "Mel",
+    "emoji": "🎭",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 40,
+      "height": "5'10\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Sidekick"
+    }
+  },
+  {
+    "id": "krusty-the-clown",
+    "name": "Herschel Krustofski",
+    "emoji": "🤡",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 50,
+      "height": "5'9\"",
+      "build": "Overweight",
+      "hair": "Green",
+      "eyes": "Blue",
+      "style": "Clown"
+    }
+  },
+  {
+    "id": "comic-book-guy",
+    "name": "Jeff Albertson",
+    "emoji": "🤓",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'8\"",
+      "build": "Overweight",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Comic Book Store Owner"
+    }
+  },
+  {
+    "id": "professor-frink",
+    "name": "John Frink",
+    "emoji": "👨‍🔬",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 45,
+      "height": "5'10\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Scientist"
+    }
+  },
+  {
+    "id": "dr-nick",
+    "name": "Nick Riviera",
+    "emoji": "👨‍⚕️",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 40,
+      "height": "5'9\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Quack Doctor"
+    }
+  },
+  {
+    "id": "dr-hibbert",
+    "name": "Julius Hibbert",
+    "emoji": "👨‍⚕️",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 45,
+      "height": "6'0\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Doctor"
+    }
+  },
+  {
+    "id": "lunchlady-doris",
+    "name": "Doris",
+    "emoji": "👩‍🍳",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 55,
+      "height": "5'6\"",
+      "build": "Overweight",
+      "hair": "Gray",
+      "eyes": "Blue",
+      "style": "Lunch Lady"
+    }
+  },
+  {
+    "id": "otto-mann",
+    "name": "Otto Mann",
+    "emoji": "🚌",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'10\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "School Bus Driver"
+    }
+  },
+  {
+    "id": "disco-stu",
+    "name": "Disco Stu",
+    "emoji": "🕺",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 45,
+      "height": "5'11\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Disco Enthusiast"
+    }
+  },
+  {
+    "id": "gil-gunderson",
+    "name": "Gil Gunderson",
+    "emoji": "👨‍💼",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 50,
+      "height": "5'9\"",
+      "build": "Slim",
+      "hair": "Gray",
+      "eyes": "Blue",
+      "style": "Salesman"
+    }
+  },
+  {
+    "id": "duffman",
+    "name": "Duffman",
+    "emoji": "🍺",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 35,
+      "height": "6'0\"",
+      "build": "Muscular",
+      "hair": "Blonde",
+      "eyes": "Blue",
+      "style": "Beer Spokesperson"
+    }
+  },
+  {
+    "id": "hans-moleman",
+    "name": "Hans Moleman",
+    "emoji": "👴",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 31,
+      "height": "4'0\"",
+      "build": "Small",
+      "hair": "Gray",
+      "eyes": "Brown",
+      "style": "Elderly Looking"
+    }
+  },
+  {
+    "id": "roy-snyder",
+    "name": "Roy Snyder",
+    "emoji": "👨‍⚖️",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 45,
+      "height": "5'10\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Judge"
+    }
+  },
+  {
+    "id": "kent-brockman",
+    "name": "Kent Brockman",
+    "emoji": "📺",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 45,
+      "height": "5'11\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "News Anchor"
+    }
+  },
+  {
+    "id": "scotch-mccloud",
+    "name": "Scotch McCloud",
+    "emoji": "🎥",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 40,
+      "height": "5'9\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Cameraman"
+    }
+  },
+  {
+    "id": "bumblebee-man",
+    "name": "Bumblebee Man",
+    "emoji": "🐝",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'8\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "TV Character"
+    }
+  },
+  {
+    "id": "squeaky-voiced-teen",
+    "name": "Squeaky Voiced Teen",
+    "emoji": "👨",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'7\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Various Jobs"
+    }
+  },
+  {
+    "id": "luigi-risotto",
+    "name": "Luigi Risotto",
+    "emoji": "🍕",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 40,
+      "height": "5'8\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Restaurant Owner"
+    }
+  },
+  {
+    "id": "captain-mccallister",
+    "name": "Captain McCallister",
+    "emoji": "⚓",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 70,
+      "height": "5'10\"",
+      "build": "Slim",
+      "hair": "White",
+      "eyes": "Blue",
+      "style": "Sea Captain"
+    }
+  },
+  {
+    "id": "jebediah-springfield",
+    "name": "Jebediah Springfield",
+    "emoji": "🗿",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": "Deceased",
+      "height": "6'0\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Town Founder"
+    }
+  },
+  {
+    "id": "shelbyville-man",
+    "name": "Shelbyville Man",
+    "emoji": "👨",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'9\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Rival Town Citizen"
+    }
+  },
+  {
+    "id": "lurleen-lumpkin",
+    "name": "Lurleen Lumpkin",
+    "emoji": "🎤",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 25,
+      "height": "5'6\"",
+      "build": "Slim",
+      "hair": "Blonde",
+      "eyes": "Blue",
+      "style": "Country Singer"
+    }
+  },
+  {
+    "id": "jessica-lovejoy",
+    "name": "Jessica Lovejoy",
+    "emoji": "👧",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 8,
+      "height": "4'0\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Mischievous"
+    }
+  },
+  {
+    "id": "sherri-terri",
+    "name": "Sherri and Terri",
+    "emoji": "👯‍♀️",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 10,
+      "height": "4'2\"",
+      "build": "Slim",
+      "hair": "Purple",
+      "eyes": "Brown",
+      "style": "Twin Bullies"
+    }
+  },
+  {
+    "id": "martin-prince",
+    "name": "Martin Prince",
+    "emoji": "👦",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 10,
+      "height": "4'0\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Teacher's Pet"
+    }
+  },
+  {
+    "id": "wendell-borton",
+    "name": "Wendell Borton",
+    "emoji": "🤢",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 10,
+      "height": "4'0\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Sickly"
+    }
+  },
+  {
+    "id": "lewis-clark",
+    "name": "Lewis Clark",
+    "emoji": "👦",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 10,
+      "height": "4'0\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Class Clown"
+    }
+  },
+  {
+    "id": "janey-powell",
+    "name": "Janey Powell",
+    "emoji": "👧",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 8,
+      "height": "3'8\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Lisa's Friend"
+    }
+  },
+  {
+    "id": "allison-taylor",
+    "name": "Allison Taylor",
+    "emoji": "👧",
+    "category": "Simpsons",
+    "gender": "female",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 8,
+      "height": "3'8\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Lisa's Friend"
+    }
+  },
+  {
+    "id": "kearney-zzyzwicz",
+    "name": "Kearney Zzyzwicz",
+    "emoji": "👨",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'10\"",
+      "build": "Muscular",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Bully"
+    }
+  },
+  {
+    "id": "dolph-starbeam",
+    "name": "Dolph Starbeam",
+    "emoji": "👨",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'9\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Bully"
+    }
+  },
+  {
+    "id": "jimbo-jones",
+    "name": "Jimbo Jones",
+    "emoji": "👨",
+    "category": "Simpsons",
+    "gender": "male",
+    "media": {
+      "title": "The Simpsons",
+      "year": 1989,
+      "type": "tv"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'11\"",
+      "build": "Muscular",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Bully Leader"
+    }
+  },
+  {
+    "id": "max-rebo",
+    "name": "Max Rebo",
+    "emoji": "🎹",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 40,
+      "height": "3'0\"",
+      "build": "Round",
+      "skin": "Blue",
+      "eyes": "Black",
+      "style": "Jizz Musician"
+    }
+  },
+  {
+    "id": "sy-snootles",
+    "name": "Sy Snootles",
+    "emoji": "🎤",
+    "category": "Star Wars",
+    "gender": "female",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 30,
+      "height": "5'8\"",
+      "build": "Slim",
+      "skin": "Pink",
+      "eyes": "Black",
+      "style": "Singer"
+    }
+  },
+  {
+    "id": "droopy-mccool",
+    "name": "Droopy McCool",
+    "emoji": "🎷",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 35,
+      "height": "6'0\"",
+      "build": "Slim",
+      "skin": "Green",
+      "eyes": "Black",
+      "style": "Musician"
+    }
+  },
+  {
+    "id": "bib-fortuna",
+    "name": "Bib Fortuna",
+    "emoji": "👽",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 50,
+      "height": "6'2\"",
+      "build": "Slim",
+      "skin": "Pale",
+      "eyes": "White",
+      "style": "Majordomo"
+    }
+  },
+  {
+    "id": "salacious-crumb",
+    "name": "Salacious B. Crumb",
+    "emoji": "🐒",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 10,
+      "height": "1'0\"",
+      "build": "Small",
+      "fur": "Brown",
+      "eyes": "Black",
+      "style": "Jester"
+    }
+  },
+  {
+    "id": "mon-mothma",
+    "name": "Mon Mothma",
+    "emoji": "👩",
+    "category": "Star Wars",
+    "gender": "female",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 45,
+      "height": "5'6\"",
+      "build": "Slim",
+      "hair": "Red",
+      "eyes": "Blue",
+      "style": "Rebel Leader"
+    }
+  },
+  {
+    "id": "admiral-ackbar",
+    "name": "Admiral Ackbar",
+    "emoji": "🐙",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 60,
+      "height": "6'0\"",
+      "build": "Slim",
+      "skin": "Pink",
+      "eyes": "Black",
+      "style": "Military Leader"
+    }
+  },
+  {
+    "id": "nien-nunb",
+    "name": "Nien Nunb",
+    "emoji": "👽",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1983,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 40,
+      "height": "5'0\"",
+      "build": "Slim",
+      "skin": "Brown",
+      "eyes": "Black",
+      "style": "Co-Pilot"
+    }
+  },
+  {
+    "id": "wedge-antilles",
+    "name": "Wedge Antilles",
+    "emoji": "👨",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1977,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 25,
+      "height": "5'10\"",
+      "build": "Athletic",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "X-Wing Pilot"
+    }
+  },
+  {
+    "id": "wes-janson",
+    "name": "Wes Janson",
+    "emoji": "👨",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 28,
+      "height": "5'9\"",
+      "build": "Athletic",
+      "hair": "Blonde",
+      "eyes": "Blue",
+      "style": "Snowspeeder Pilot"
+    }
+  },
+  {
+    "id": "derek-klivian",
+    "name": "Derek 'Hobbie' Klivian",
+    "emoji": "👨",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 26,
+      "height": "5'11\"",
+      "build": "Athletic",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Snowspeeder Pilot"
+    }
+  },
+  {
+    "id": "zuckuss",
+    "name": "Zuckuss",
+    "emoji": "👽",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'8\"",
+      "build": "Slim",
+      "skin": "Green",
+      "eyes": "Black",
+      "style": "Bounty Hunter"
+    }
+  },
+  {
+    "id": "4-lom",
+    "name": "4-LOM",
+    "emoji": "🤖",
+    "category": "Star Wars",
+    "gender": "robot",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "6'0\"",
+      "build": "Slim",
+      "material": "Metal",
+      "eyes": "Red",
+      "style": "Bounty Hunter Droid"
+    }
+  },
+  {
+    "id": "dengar",
+    "name": "Dengar",
+    "emoji": "👨",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 40,
+      "height": "6'0\"",
+      "build": "Muscular",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Bounty Hunter"
+    }
+  },
+  {
+    "id": "bossk",
+    "name": "Bossk",
+    "emoji": "🦎",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 50,
+      "height": "6'4\"",
+      "build": "Muscular",
+      "skin": "Green",
+      "eyes": "Yellow",
+      "style": "Trandoshan Hunter"
+    }
+  },
+  {
+    "id": "ig-88",
+    "name": "IG-88",
+    "emoji": "🤖",
+    "category": "Star Wars",
+    "gender": "robot",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "6'6\"",
+      "build": "Slim",
+      "material": "Metal",
+      "eyes": "Red",
+      "style": "Assassin Droid"
+    }
+  },
+  {
+    "id": "wampa",
+    "name": "Wampa",
+    "emoji": "❄️",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "8'0\"",
+      "build": "Massive",
+      "fur": "White",
+      "eyes": "Yellow",
+      "style": "Ice Creature"
+    }
+  },
+  {
+    "id": "tauntaun",
+    "name": "Tauntaun",
+    "emoji": "🦎",
+    "category": "Star Wars",
+    "gender": "neutral",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "5'0\" at shoulder",
+      "build": "Medium",
+      "fur": "White",
+      "eyes": "Black",
+      "style": "Riding Beast"
+    }
+  },
+  {
+    "id": "snowtrooper",
+    "name": "Snowtrooper",
+    "emoji": "❄️",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "6'0\"",
+      "build": "Athletic",
+      "armor": "White",
+      "eyes": "Hidden",
+      "style": "Imperial Trooper"
+    }
+  },
+  {
+    "id": "at-at-driver",
+    "name": "AT-AT Driver",
+    "emoji": "👨",
+    "category": "Star Wars",
+    "gender": "male",
+    "media": {
+      "title": "Star Wars",
+      "year": 1980,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "5'10\"",
+      "build": "Athletic",
+      "armor": "Gray",
+      "eyes": "Hidden",
+      "style": "Imperial Pilot"
+    }
   }
 ]

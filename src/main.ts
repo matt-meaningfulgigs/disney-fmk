@@ -25,6 +25,14 @@ interface Character {
 
 interface Slot { char: Character; choice?: Choice }
 
+// Extended universe setup
+const extendedUniverseCheckbox = document.getElementById('extended-universe') as HTMLInputElement;
+const extendedUniverseCategories = new Set([
+  'Star Wars',
+  'Simpsons',
+  'Marvel'
+]);
+
 // URL and state management
 const url = new URL(window.location.href)
 const params = url.searchParams
@@ -42,6 +50,7 @@ const getInitialState = () => {
       const [id, sel] = p.split(',')
       const c = (chars as Character[]).find(x => x.id === id)
       if (c) {
+        // Always add characters from URL, even if they're extended universe
         slots.push({ 
           char: c, 
           choice: (['fuck','marry','kill'] as const).includes(sel as any) ? sel as Choice : undefined 
@@ -73,17 +82,19 @@ function filterCharacters(characters: Character[], category?: string, gender?: s
   if (gender && gender !== 'all') {
     filtered = filtered.filter(c => c.gender === gender)
   }
+  // Filter out extended universe characters if extended mode is off
+  if (!extendedUniverseCheckbox.checked) {
+    filtered = filtered.filter(c => !extendedUniverseCategories.has(c.category))
+  }
   return filtered
 }
 
 // Initialize state
 const { slots, initialGender, initialCategory } = getInitialState()
 
-// If no valid characters from URL, pick random ones
-if (!slots.length) {
-  const filteredChars = filterCharacters(chars as Character[], initialCategory, initialGender)
-  const randomChars = pickRandom(filteredChars, 3)
-  slots.push(...randomChars.map(char => ({ char, choice: undefined })))
+// Set initial extended universe state to false
+if (extendedUniverseCheckbox) {
+  extendedUniverseCheckbox.checked = false
 }
 
 // Create filters
@@ -93,29 +104,50 @@ const genderSelect = document.createElement('select')
 genderSelect.id = 'gender'
 
 // Add category options
-const categories = ['All Categories', ...new Set((chars as Character[]).map(c => c.category))]
-categories.forEach(category => {
+const allCategories = ['All Categories', ...new Set((chars as Character[]).map(c => c.category))]
+
+// Add all category options but hide extended ones initially
+allCategories.forEach(category => {
   const option = document.createElement('option')
   option.value = category
   option.textContent = category
   if (category === initialCategory) {
     option.selected = true
   }
+  // Hide extended universe categories initially
+  if (extendedUniverseCategories.has(category)) {
+    option.style.display = 'none'
+  }
   categorySelect.appendChild(option)
 })
 
-// Add gender options
-const genderOptions = [
+// Define gender options
+const baseGenderOptions = [
   { value: 'all', text: "I'm super bisexual" },
   { value: 'female', text: 'Women only' },
   { value: 'male', text: 'Men only' }
 ]
-genderOptions.forEach(option => {
+
+// Define extended universe gender options
+const extendedGenderOptions = [
+  { value: 'robot', text: 'Robots only' },
+  { value: 'plant', text: 'Plants only' },
+  { value: 'raccoon', text: 'Raccoons only' },
+  { value: 'fluid', text: 'Gender Fluid only' }
+]
+
+// Add all gender options but hide extended ones initially
+const allGenderOptions = [...baseGenderOptions, ...extendedGenderOptions]
+allGenderOptions.forEach(option => {
   const opt = document.createElement('option')
   opt.value = option.value
   opt.textContent = option.text
   if (opt.value === initialGender) {
     opt.selected = true
+  }
+  // Hide extended universe gender options initially
+  if (extendedGenderOptions.some(ext => ext.value === option.value)) {
+    opt.style.display = 'none'
   }
   genderSelect.appendChild(opt)
 })
@@ -136,6 +168,17 @@ filterGroups.className = 'filter-groups'
 filterGroups.appendChild(genderGroup)
 filterGroups.appendChild(categoryGroup)
 topBar.insertBefore(filterGroups, topBar.firstChild)
+
+// If we have characters from URL, use them
+if (slots.length > 0) {
+  render()
+} else {
+  // If no valid characters from URL, pick random ones
+  const filteredChars = filterCharacters(chars as Character[], initialCategory, initialGender)
+  const randomChars = pickRandom(filteredChars, 3)
+  slots.push(...randomChars.map(char => ({ char, choice: undefined })))
+  render()
+}
 
 // Update URL with current state
 function updateURL() {
@@ -248,36 +291,10 @@ function render() {
   updateURL()
 }
 
-// Add event listeners for filters
-categorySelect.addEventListener('change', () => {
-  const selectedCategory = categorySelect.value
-  const selectedGender = genderSelect.value as Gender
-  const filteredChars = filterCharacters(chars as Character[], selectedCategory, selectedGender)
-  const randomChars = pickRandom(filteredChars, 3)
-  
-  // Clear existing slots
-  slots.length = 0
-  
-  // Add new characters
-  slots.push(...randomChars.map(char => ({ char, choice: undefined })))
-  
-  render()
-})
-
-genderSelect.addEventListener('change', () => {
-  const selectedCategory = categorySelect.value
-  const selectedGender = genderSelect.value as Gender
-  const filteredChars = filterCharacters(chars as Character[], selectedCategory, selectedGender)
-  const randomChars = pickRandom(filteredChars, 3)
-  
-  // Clear existing slots
-  slots.length = 0
-  
-  // Add new characters
-  slots.push(...randomChars.map(char => ({ char, choice: undefined })))
-  
-  render()
-})
+// Add event listeners
+extendedUniverseCheckbox.addEventListener('change', updateFilters)
+categorySelect.addEventListener('change', updateFilters)
+genderSelect.addEventListener('change', updateFilters)
 
 // Add event listeners for buttons
 document.getElementById('refresh')?.addEventListener('click', () => {
@@ -325,5 +342,56 @@ document.querySelector('#cards')?.addEventListener('click', (e) => {
   }
 })
 
-// Initial render
-render()
+function updateFilters() {
+  const genderFilter = genderSelect.value;
+  const categoryFilter = categorySelect.value;
+  const showExtended = extendedUniverseCheckbox.checked;
+
+  // Toggle 80s theme
+  document.body.classList.toggle('extended-universe-active', showExtended);
+
+  // Update gender options text
+  const allOption = genderSelect.querySelector('option[value="all"]')
+  if (allOption) {
+    allOption.textContent = showExtended ? "I'm super omnisexual" : "I'm super bisexual"
+  }
+
+  // Update category options based on extended universe toggle
+  Array.from(categorySelect.options).forEach(option => {
+    if (option.value && extendedUniverseCategories.has(option.value)) {
+      option.style.display = showExtended ? '' : 'none';
+      // If the currently selected category is an extended universe category and we're turning off extended universe,
+      // reset to "All Categories"
+      if (!showExtended && option.selected) {
+        categorySelect.value = 'All Categories';
+      }
+    }
+  });
+
+  // Update gender options based on extended universe toggle
+  Array.from(genderSelect.options).forEach(option => {
+    if (option.value && extendedGenderOptions.some(ext => ext.value === option.value)) {
+      option.style.display = showExtended ? '' : 'none';
+      // If the currently selected gender is an extended universe gender and we're turning off extended universe,
+      // reset to "all"
+      if (!showExtended && option.selected) {
+        genderSelect.value = 'all';
+      }
+    }
+  });
+
+  // Filter characters based on current filters and extended universe state
+  let filteredCharacters = filterCharacters(chars as Character[], categorySelect.value, genderSelect.value);
+
+  // If no characters match the current filters, fall back to all available characters
+  if (filteredCharacters.length === 0) {
+    filteredCharacters = filterCharacters(chars as Character[], 'All Categories', 'all');
+  }
+
+  // Clear existing slots and pick new random characters
+  slots.length = 0;
+  const randomChars = pickRandom(filteredCharacters, 3);
+  slots.push(...randomChars.map(char => ({ char, choice: undefined })));
+  
+  render();
+}
