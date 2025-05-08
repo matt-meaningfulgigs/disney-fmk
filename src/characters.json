@@ -1,0 +1,2261 @@
+[
+  {
+    "id": "ariel",
+    "name": "Ariel",
+    "emoji": "🧜‍♀️",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'4\"",
+      "measurements": "34-24-34",
+      "hair": "Red",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "prince-eric",
+    "name": "Eric",
+    "emoji": "🤴",
+    "category": "Prince",
+    "gender": "male",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 18,
+      "height": "6'0\"",
+      "build": "Athletic",
+      "hair": "Brown",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "scar",
+    "name": "Scar",
+    "emoji": "🦁",
+    "category": "Villain",
+    "gender": "male",
+    "media": {
+      "title": "The Lion King",
+      "year": 1994,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 15,
+      "height": "4'6\"",
+      "build": "Lean",
+      "fur": "Dark Brown",
+      "eyes": "Green"
+    }
+  },
+  {
+    "id": "genie",
+    "name": "Genie",
+    "emoji": "🧞‍♂️",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Aladdin",
+      "year": 1992,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "10,000+",
+      "height": "Variable",
+      "build": "Muscular",
+      "skin": "Blue",
+      "eyes": "White"
+    }
+  },
+  {
+    "id": "iago",
+    "name": "Iago",
+    "emoji": "🦜",
+    "category": "Villain Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "Aladdin",
+      "year": 1992,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 5,
+      "height": "1'2\"",
+      "build": "Small",
+      "feathers": "Red",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "abu",
+    "name": "Abu",
+    "emoji": "🐒",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "Aladdin",
+      "year": 1992,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "5",
+      "height": "1'0\"",
+      "build": "Small Monkey",
+      "fur": "Brown",
+      "vest": "Purple",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "mickey",
+    "name": "Mickey Mouse",
+    "emoji": "🐭",
+    "category": "Disney General",
+    "gender": "male",
+    "media": {
+      "title": "Steamboat Willie",
+      "year": 1928,
+      "type": "short"
+    },
+    "stats": {
+      "age": 95,
+      "height": "2'3\"",
+      "build": "Round",
+      "fur": "Black",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "minnie",
+    "name": "Minnie Mouse",
+    "emoji": "🐭",
+    "category": "Disney General",
+    "gender": "female",
+    "media": {
+      "title": "Steamboat Willie",
+      "year": 1928,
+      "type": "short"
+    },
+    "stats": {
+      "age": 95,
+      "height": "2'2\"",
+      "build": "Round",
+      "fur": "Black",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "donald",
+    "name": "Donald Duck",
+    "emoji": "🦆",
+    "category": "Disney General",
+    "gender": "male",
+    "media": {
+      "title": "The Wise Little Hen",
+      "year": 1934,
+      "type": "short"
+    },
+    "stats": {
+      "age": 89,
+      "height": "2'4\"",
+      "build": "Round",
+      "feathers": "White",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "daisy",
+    "name": "Daisy Duck",
+    "emoji": "🦆",
+    "category": "Disney General",
+    "gender": "female",
+    "media": {
+      "title": "Mr. Duck Steps Out",
+      "year": 1940,
+      "type": "short"
+    },
+    "stats": {
+      "age": 83,
+      "height": "2'3\"",
+      "build": "Slim",
+      "feathers": "White",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "goofy",
+    "name": "Goofy",
+    "emoji": "🐕",
+    "category": "Disney General",
+    "gender": "male",
+    "media": {
+      "title": "Mickey's Revue",
+      "year": 1932,
+      "type": "short"
+    },
+    "stats": {
+      "age": 91,
+      "height": "5'8\"",
+      "build": "Tall",
+      "fur": "Black",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "pluto",
+    "name": "Pluto",
+    "emoji": "🐕",
+    "category": "Disney General",
+    "gender": "male",
+    "media": {
+      "title": "The Chain Gang",
+      "year": 1930,
+      "type": "short"
+    },
+    "stats": {
+      "age": 93,
+      "height": "2'6\"",
+      "build": "Medium",
+      "fur": "Orange",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "snow-white",
+    "name": "Snow White",
+    "emoji": "👩🏻",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Snow White and the Seven Dwarfs",
+      "year": 1937,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 14,
+      "height": "5'2\"",
+      "measurements": "32-22-32",
+      "hair": "Black",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "cinderella",
+    "name": "Cinderella",
+    "emoji": "👱‍♀️",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Cinderella",
+      "year": 1950,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 19,
+      "height": "5'5\"",
+      "measurements": "34-24-34",
+      "hair": "Blonde",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "aurora",
+    "name": "Aurora",
+    "emoji": "👱‍♀️",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Sleeping Beauty",
+      "year": 1959,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'6\"",
+      "measurements": "34-24-34",
+      "hair": "Blonde",
+      "eyes": "Violet"
+    }
+  },
+  {
+    "id": "belle",
+    "name": "Belle",
+    "emoji": "👩🏻",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Beauty and the Beast",
+      "year": 1991,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 17,
+      "height": "5'5\"",
+      "measurements": "34-24-34",
+      "hair": "Brown",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "jasmine",
+    "name": "Jasmine",
+    "emoji": "👩🏽",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Aladdin",
+      "year": 1992,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 15,
+      "height": "5'4\"",
+      "measurements": "34-24-34",
+      "hair": "Black",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "pocahontas",
+    "name": "Pocahontas",
+    "emoji": "👩🏽",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Pocahontas",
+      "year": 1995,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 18,
+      "height": "5'6\"",
+      "measurements": "34-24-34",
+      "hair": "Black",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "mulan",
+    "name": "Mulan",
+    "emoji": "👩🏻",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Mulan",
+      "year": 1998,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'4\"",
+      "measurements": "34-24-34",
+      "hair": "Black",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "tiana",
+    "name": "Tiana",
+    "emoji": "👩🏾",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "The Princess and the Frog",
+      "year": 2009,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 19,
+      "height": "5'5\"",
+      "measurements": "34-24-34",
+      "hair": "Black",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "rapunzel",
+    "name": "Rapunzel",
+    "emoji": "👱‍♀️",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Tangled",
+      "year": 2010,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 18,
+      "height": "5'5\"",
+      "measurements": "34-24-34",
+      "hair": "Blonde",
+      "eyes": "Green"
+    }
+  },
+  {
+    "id": "merida",
+    "name": "Merida",
+    "emoji": "👩🏻‍🦰",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Brave",
+      "year": 2012,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'6\"",
+      "measurements": "34-24-34",
+      "hair": "Red",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "moana",
+    "name": "Moana",
+    "emoji": "👩🏽",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Moana",
+      "year": 2016,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'4\"",
+      "measurements": "34-24-34",
+      "hair": "Black",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "elsa",
+    "name": "Elsa",
+    "emoji": "👱‍♀️",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Frozen",
+      "year": 2013,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 21,
+      "height": "5'7\"",
+      "measurements": "34-24-34",
+      "hair": "Blonde",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "anna",
+    "name": "Anna",
+    "emoji": "👩🏻‍🦰",
+    "category": "Princess",
+    "gender": "female",
+    "media": {
+      "title": "Frozen",
+      "year": 2013,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 18,
+      "height": "5'5\"",
+      "measurements": "34-24-34",
+      "hair": "Red",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "prince-charming",
+    "name": "Prince Charming",
+    "emoji": "👱‍♂️",
+    "category": "Prince",
+    "gender": "male",
+    "media": {
+      "title": "Cinderella",
+      "year": 1950,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 20,
+      "height": "6'0\"",
+      "build": "Athletic",
+      "hair": "Blonde",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "prince-phillip",
+    "name": "Prince Phillip",
+    "emoji": "👱‍♂️",
+    "category": "Prince",
+    "gender": "male",
+    "media": {
+      "title": "Sleeping Beauty",
+      "year": 1959,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 20,
+      "height": "6'0\"",
+      "build": "Athletic",
+      "hair": "Blonde",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "prince-adam",
+    "name": "Prince Adam",
+    "emoji": "👱‍♂️",
+    "category": "Prince",
+    "gender": "male",
+    "media": {
+      "title": "Beauty and the Beast",
+      "year": 1991,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 21,
+      "height": "6'2\"",
+      "build": "Athletic",
+      "hair": "Blonde",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "aladdin",
+    "name": "Aladdin",
+    "emoji": "👨🏽",
+    "category": "Prince",
+    "gender": "male",
+    "media": {
+      "title": "Aladdin",
+      "year": 1992,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 18,
+      "height": "5'8\"",
+      "build": "Athletic",
+      "hair": "Black",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "john-smith",
+    "name": "John Smith",
+    "emoji": "👨🏻",
+    "category": "Prince",
+    "gender": "male",
+    "media": {
+      "title": "Pocahontas",
+      "year": 1995,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 27,
+      "height": "6'0\"",
+      "build": "Athletic",
+      "hair": "Brown",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "shang",
+    "name": "Shang",
+    "emoji": "👨🏻",
+    "category": "Prince",
+    "gender": "male",
+    "media": {
+      "title": "Mulan",
+      "year": 1998,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 25,
+      "height": "6'0\"",
+      "build": "Athletic",
+      "hair": "Black",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "naveen",
+    "name": "Naveen",
+    "emoji": "👨🏽",
+    "category": "Prince",
+    "gender": "male",
+    "media": {
+      "title": "The Princess and the Frog",
+      "year": 2009,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 20,
+      "height": "5'10\"",
+      "build": "Athletic",
+      "hair": "Black",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "flynn-rider",
+    "name": "Flynn Rider",
+    "emoji": "👨🏻",
+    "category": "Prince",
+    "gender": "male",
+    "media": {
+      "title": "Tangled",
+      "year": 2010,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 26,
+      "height": "6'0\"",
+      "build": "Athletic",
+      "hair": "Brown",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "kristoff",
+    "name": "Kristoff",
+    "emoji": "👨🏻",
+    "category": "Prince",
+    "gender": "male",
+    "media": {
+      "title": "Frozen",
+      "year": 2013,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 23,
+      "height": "6'2\"",
+      "build": "Athletic",
+      "hair": "Blonde",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "maleficent",
+    "name": "Maleficent",
+    "emoji": "🧙‍♀️",
+    "category": "Villain",
+    "gender": "female",
+    "media": {
+      "title": "Sleeping Beauty",
+      "year": 1959,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "6'2\"",
+      "build": "Slender",
+      "hair": "Black",
+      "eyes": "Yellow"
+    }
+  },
+  {
+    "id": "cruella",
+    "name": "Cruella",
+    "emoji": "👩🏻",
+    "category": "Villain",
+    "gender": "female",
+    "media": {
+      "title": "101 Dalmatians",
+      "year": 1961,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'8\"",
+      "measurements": "36-24-36",
+      "hair": "Black and White",
+      "eyes": "Green"
+    }
+  },
+  {
+    "id": "ursula",
+    "name": "Ursula",
+    "emoji": "🧜‍♀️",
+    "category": "Villain",
+    "gender": "female",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "8'0\"",
+      "build": "Large",
+      "hair": "White",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "jafar",
+    "name": "Jafar",
+    "emoji": "🧙‍♂️",
+    "category": "Villain",
+    "gender": "male",
+    "media": {
+      "title": "Aladdin",
+      "year": 1992,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 45,
+      "height": "6'2\"",
+      "build": "Slender",
+      "hair": "Black",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "hades",
+    "name": "Hades",
+    "emoji": "👨🏻",
+    "category": "Villain",
+    "gender": "male",
+    "media": {
+      "title": "Hercules",
+      "year": 1997,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Immortal",
+      "height": "7'0\"",
+      "build": "Muscular",
+      "hair": "Blue Flames",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "captain-hook",
+    "name": "Captain Hook",
+    "emoji": "🏴‍☠️",
+    "category": "Villain",
+    "gender": "male",
+    "media": {
+      "title": "Peter Pan",
+      "year": 1953,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 45,
+      "height": "6'0\"",
+      "build": "Slender",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Pirate Captain"
+    }
+  },
+  {
+    "id": "queen-of-hearts",
+    "name": "Queen of Hearts",
+    "emoji": "👑",
+    "category": "Villain",
+    "gender": "female",
+    "media": {
+      "title": "Alice in Wonderland",
+      "year": 1951,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 45,
+      "height": "5'8\"",
+      "build": "Round",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Royal"
+    }
+  },
+  {
+    "id": "evil-queen",
+    "name": "Evil Queen",
+    "emoji": "👑",
+    "category": "Villain",
+    "gender": "female",
+    "media": {
+      "title": "Snow White and the Seven Dwarfs",
+      "year": 1937,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'10\"",
+      "build": "Slender",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Royal"
+    }
+  },
+  {
+    "id": "gaston",
+    "name": "Gaston",
+    "emoji": "💪",
+    "category": "Villain",
+    "gender": "male",
+    "media": {
+      "title": "Beauty and the Beast",
+      "year": 1991,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 25,
+      "height": "6'2\"",
+      "build": "Muscular",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Hunter"
+    }
+  },
+  {
+    "id": "mother-gothel",
+    "name": "Mother Gothel",
+    "emoji": "🧙‍♀️",
+    "category": "Villain",
+    "gender": "female",
+    "media": {
+      "title": "Tangled",
+      "year": 2010,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 300,
+      "height": "5'8\"",
+      "build": "Slender",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Elegant"
+    }
+  },
+  {
+    "id": "tinkerbell",
+    "name": "Tinker Bell",
+    "emoji": "🧚‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "Peter Pan",
+      "year": 1953,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "5 inches",
+      "build": "Petite Fairy",
+      "hair": "Blonde",
+      "wings": "Translucent",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "peter-pan",
+    "name": "Peter Pan",
+    "emoji": "🧚‍♂️",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Peter Pan",
+      "year": 1953,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Never Grows Up",
+      "height": "4'6\"",
+      "build": "Slim",
+      "hair": "Red",
+      "eyes": "Blue",
+      "style": "Boyish"
+    }
+  },
+  {
+    "id": "fairy-godmother",
+    "name": "Fairy Godmother",
+    "emoji": "🧚‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "Cinderella",
+      "year": 1950,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "5'6\"",
+      "build": "Plump",
+      "hair": "White",
+      "eyes": "Blue",
+      "style": "Magical"
+    }
+  },
+  {
+    "id": "merlin",
+    "name": "Merlin",
+    "emoji": "🧙‍♂️",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "The Sword in the Stone",
+      "year": 1963,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "6'0\"",
+      "build": "Slender",
+      "hair": "White",
+      "beard": "Long White",
+      "eyes": "Blue",
+      "style": "Wizard"
+    }
+  },
+  {
+    "id": "olaf",
+    "name": "Olaf",
+    "emoji": "⛄",
+    "category": "Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "Frozen",
+      "year": 2013,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "1",
+      "height": "5'4\"",
+      "build": "Snowman",
+      "nose": "Carrot",
+      "arms": "Twigs",
+      "eyes": "Black",
+      "style": "Playful"
+    }
+  },
+  {
+    "id": "baymax",
+    "name": "Baymax",
+    "emoji": "🤖",
+    "category": "Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "Big Hero 6",
+      "year": 2014,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "1",
+      "height": "6'2\"",
+      "build": "Inflatable",
+      "material": "Vinyl",
+      "color": "White",
+      "eyes": "Black",
+      "style": "Medical Robot"
+    }
+  },
+  {
+    "id": "pascal",
+    "name": "Pascal",
+    "emoji": "🦎",
+    "category": "Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "Tangled",
+      "year": 2010,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "3",
+      "length": "0'6\"",
+      "build": "Small Chameleon",
+      "color": "Changes",
+      "eyes": "Black",
+      "style": "Loyal"
+    }
+  },
+  {
+    "id": "sebastian",
+    "name": "Sebastian",
+    "emoji": "🦀",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "40",
+      "length": "0'4\"",
+      "build": "Small Crab",
+      "shell": "Red",
+      "claws": "Conductor's Baton",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "flounder",
+    "name": "Flounder",
+    "emoji": "🐠",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "8",
+      "length": "0'8\"",
+      "build": "Round Fish",
+      "scales": "Yellow and Blue",
+      "fins": "Blue",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "timon",
+    "name": "Timon",
+    "emoji": "🦭",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "The Lion King",
+      "year": 1994,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "15",
+      "height": "0'6\"",
+      "build": "Slender Meerkat",
+      "fur": "Brown",
+      "tail": "Long",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "pumbaa",
+    "name": "Pumbaa",
+    "emoji": "🐗",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "The Lion King",
+      "year": 1994,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "15",
+      "height": "3'0\"",
+      "build": "Rotund Warthog",
+      "fur": "Red-Brown",
+      "tusks": "Sharp",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "zazu",
+    "name": "Zazu",
+    "emoji": "🦜",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "The Lion King",
+      "year": 1994,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "20",
+      "height": "0'8\"",
+      "build": "Small Hornbill",
+      "feathers": "Blue and White",
+      "beak": "Orange",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "rafiki",
+    "name": "Rafiki",
+    "emoji": "🐒",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "The Lion King",
+      "year": 1994,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "60",
+      "height": "4'0\"",
+      "build": "Wise Mandrill",
+      "fur": "Grey",
+      "face": "Blue and Red",
+      "eyes": "Yellow"
+    }
+  },
+  {
+    "id": "abu",
+    "name": "Abu",
+    "emoji": "🐒",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "Aladdin",
+      "year": 1992,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "5",
+      "height": "1'0\"",
+      "build": "Small Monkey",
+      "fur": "Brown",
+      "vest": "Purple",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "rajah",
+    "name": "Rajah",
+    "emoji": "🐯",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "Aladdin",
+      "year": 1992,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "8",
+      "height": "3'6\" at shoulder",
+      "build": "Muscular Tiger",
+      "fur": "Orange and Black",
+      "stripes": "Bold",
+      "eyes": "Yellow"
+    }
+  },
+  {
+    "id": "meeko",
+    "name": "Meeko",
+    "emoji": "🦝",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "Pocahontas",
+      "year": 1995,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "4",
+      "height": "1'0\"",
+      "build": "Chubby Raccoon",
+      "fur": "Grey and Black",
+      "mask": "Black",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "flit",
+    "name": "Flit",
+    "emoji": "🐦",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "Pocahontas",
+      "year": 1995,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "2",
+      "length": "0'3\"",
+      "build": "Tiny Hummingbird",
+      "feathers": "Ruby Red",
+      "wings": "Iridescent",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "carpet",
+    "name": "Magic Carpet",
+    "emoji": "🪟",
+    "category": "Sidekick",
+    "gender": "neutral"
+  },
+  {
+    "id": "chip",
+    "name": "Chip",
+    "emoji": "☕",
+    "category": "Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "Beauty and the Beast",
+      "year": 1991,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "0'4\"",
+      "build": "Small Teacup",
+      "material": "Fine China",
+      "color": "White with Gold Trim",
+      "eyes": "Blue",
+      "style": "Cute"
+    }
+  },
+  {
+    "id": "lumiere",
+    "name": "Lumiere",
+    "emoji": "🕯️",
+    "category": "Object",
+    "gender": "male",
+    "media": {
+      "title": "Beauty and the Beast",
+      "year": 1991,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "1'6\"",
+      "build": "Slender Candlestick",
+      "material": "Brass",
+      "flame": "Golden",
+      "eyes": "Gold"
+    }
+  },
+  {
+    "id": "cogsworth",
+    "name": "Cogsworth",
+    "emoji": "⏰",
+    "category": "Object",
+    "gender": "male",
+    "media": {
+      "title": "Beauty and the Beast",
+      "year": 1991,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "1'0\"",
+      "build": "Round Clock",
+      "material": "Wood and Brass",
+      "time": "Always Late",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "mrs-potts",
+    "name": "Mrs. Potts",
+    "emoji": "🫖",
+    "category": "Object",
+    "gender": "female",
+    "media": {
+      "title": "Beauty and the Beast",
+      "year": 1991,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "50+",
+      "height": "1'2\"",
+      "build": "Round Teapot",
+      "material": "Fine China",
+      "capacity": "4 cups",
+      "eyes": "Blue"
+    }
+  },
+  {
+    "id": "chip-potts",
+    "name": "Chip Potts",
+    "emoji": "☕",
+    "category": "Sidekick",
+    "gender": "male"
+  },
+  {
+    "id": "jiminy-cricket",
+    "name": "Jiminy Cricket",
+    "emoji": "🦗",
+    "category": "Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "Pinocchio",
+      "year": 1940,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "2 inches",
+      "build": "Small Cricket",
+      "clothes": "Top Hat and Tuxedo",
+      "umbrella": "Always Carried",
+      "eyes": "Black"
+    }
+  },
+  {
+    "id": "geppetto",
+    "name": "Geppetto",
+    "emoji": "👨🏻‍🔧",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Pinocchio",
+      "year": 1940,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 65,
+      "height": "5'8\"",
+      "build": "Slim",
+      "hair": "White",
+      "beard": "White",
+      "eyes": "Brown",
+      "style": "Woodworker"
+    }
+  },
+  {
+    "id": "pinocchio",
+    "name": "Pinocchio",
+    "emoji": "🤥",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Pinocchio",
+      "year": 1940,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Newborn",
+      "height": "2'6\"",
+      "build": "Wooden",
+      "material": "Pine",
+      "nose": "Grows when lying",
+      "eyes": "Blue",
+      "style": "Marionette"
+    }
+  },
+  {
+    "id": "blue-fairy",
+    "name": "Blue Fairy",
+    "emoji": "🧚‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "Pinocchio",
+      "year": 1940,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "5'6\"",
+      "build": "Slender",
+      "hair": "Blonde",
+      "wings": "Blue",
+      "eyes": "Blue",
+      "style": "Magical"
+    }
+  },
+  {
+    "id": "monstro",
+    "name": "Monstro",
+    "emoji": "🐋",
+    "category": "Villain",
+    "gender": "male",
+    "media": {
+      "title": "Pinocchio",
+      "year": 1940,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "length": "100 feet",
+      "build": "Massive Whale",
+      "color": "Grey",
+      "eyes": "Black",
+      "style": "Fearsome"
+    }
+  },
+  {
+    "id": "dumbo",
+    "name": "Dumbo",
+    "emoji": "🐘",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Dumbo",
+      "year": 1941,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "1",
+      "height": "3'0\"",
+      "build": "Baby Elephant",
+      "ears": "Extra Large",
+      "color": "Grey",
+      "eyes": "Blue",
+      "style": "Cute"
+    }
+  },
+  {
+    "id": "timothy",
+    "name": "Timothy Q. Mouse",
+    "emoji": "🐭",
+    "category": "Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "Dumbo",
+      "year": 1941,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "0'6\"",
+      "build": "Small Mouse",
+      "fur": "Brown",
+      "eyes": "Black",
+      "style": "Circus Performer"
+    }
+  },
+  {
+    "id": "bambi",
+    "name": "Bambi",
+    "emoji": "🦌",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Bambi",
+      "year": 1942,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "1",
+      "height": "2'0\"",
+      "build": "Young Fawn",
+      "fur": "Brown",
+      "spots": "White",
+      "eyes": "Brown",
+      "style": "Innocent"
+    }
+  },
+  {
+    "id": "thumper",
+    "name": "Thumper",
+    "emoji": "🐰",
+    "category": "Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "Bambi",
+      "year": 1942,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "2",
+      "height": "1'0\"",
+      "build": "Small Rabbit",
+      "fur": "Grey",
+      "tail": "White",
+      "eyes": "Black",
+      "style": "Playful"
+    }
+  },
+  {
+    "id": "flower",
+    "name": "Flower",
+    "emoji": "🦨",
+    "category": "Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "Bambi",
+      "year": 1942,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "2",
+      "height": "0'8\"",
+      "build": "Small Skunk",
+      "fur": "Black and White",
+      "eyes": "Black",
+      "style": "Shy"
+    }
+  },
+  {
+    "id": "wendy",
+    "name": "Wendy",
+    "emoji": "👧🏻",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "Peter Pan",
+      "year": 1953,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 12,
+      "height": "4'8\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Victorian"
+    }
+  },
+  {
+    "id": "john-darling",
+    "name": "John Darling",
+    "emoji": "👦🏻",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Peter Pan",
+      "year": 1953,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 10,
+      "height": "4'6\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Victorian"
+    }
+  },
+  {
+    "id": "michael-darling",
+    "name": "Michael Darling",
+    "emoji": "👶🏻",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Peter Pan",
+      "year": 1953,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 5,
+      "height": "3'6\"",
+      "build": "Small",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Victorian"
+    }
+  },
+  {
+    "id": "lost-boys",
+    "name": "Lost Boys",
+    "emoji": "👦🏻",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Peter Pan",
+      "year": 1953,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Various",
+      "height": "3'6\" to 4'6\"",
+      "build": "Various",
+      "hair": "Various",
+      "eyes": "Various",
+      "style": "Wild"
+    }
+  },
+  {
+    "id": "tiger-lily",
+    "name": "Tiger Lily",
+    "emoji": "👧🏽",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "Peter Pan",
+      "year": 1953,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 12,
+      "height": "4'8\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Native American"
+    }
+  },
+  {
+    "id": "lady",
+    "name": "Lady",
+    "emoji": "🐕",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "Lady and the Tramp",
+      "year": 1955,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "1",
+      "height": "1'6\"",
+      "build": "Small Cocker Spaniel",
+      "fur": "Brown and White",
+      "ears": "Long",
+      "eyes": "Brown",
+      "style": "Refined"
+    }
+  },
+  {
+    "id": "tramp",
+    "name": "Tramp",
+    "emoji": "🐕",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Lady and the Tramp",
+      "year": 1955,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "3",
+      "height": "2'0\"",
+      "build": "Medium Mixed Breed",
+      "fur": "Brown and Black",
+      "ears": "Pointed",
+      "eyes": "Brown",
+      "style": "Streetwise"
+    }
+  },
+  {
+    "id": "jock",
+    "name": "Jock",
+    "emoji": "🐕",
+    "category": "Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "Lady and the Tramp",
+      "year": 1955,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "5",
+      "height": "1'4\"",
+      "build": "Small Scottish Terrier",
+      "fur": "Black",
+      "beard": "Long",
+      "eyes": "Black",
+      "style": "Scottish"
+    }
+  },
+  {
+    "id": "trusty",
+    "name": "Trusty",
+    "emoji": "🐕",
+    "category": "Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "Lady and the Tramp",
+      "year": 1955,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "8",
+      "height": "2'0\"",
+      "build": "Large Bloodhound",
+      "fur": "Brown",
+      "ears": "Long",
+      "eyes": "Brown",
+      "style": "Southern"
+    }
+  },
+  {
+    "id": "siamese-cats",
+    "name": "Si and Am",
+    "emoji": "🐱",
+    "category": "Villain Sidekick",
+    "gender": "female",
+    "media": {
+      "title": "Lady and the Tramp",
+      "year": 1955,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "2",
+      "height": "1'0\"",
+      "build": "Slim Siamese Cats",
+      "fur": "Cream and Brown",
+      "eyes": "Blue",
+      "style": "Mischievous"
+    }
+  },
+  {
+    "id": "flora",
+    "name": "Flora",
+    "emoji": "🧚‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "Sleeping Beauty",
+      "year": 1959,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "5'6\"",
+      "build": "Plump",
+      "hair": "Red",
+      "dress": "Red",
+      "eyes": "Blue",
+      "style": "Fairy"
+    }
+  },
+  {
+    "id": "fauna",
+    "name": "Fauna",
+    "emoji": "🧚‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "Sleeping Beauty",
+      "year": 1959,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "5'6\"",
+      "build": "Plump",
+      "hair": "Green",
+      "dress": "Green",
+      "eyes": "Blue",
+      "style": "Fairy"
+    }
+  },
+  {
+    "id": "merryweather",
+    "name": "Merryweather",
+    "emoji": "🧚‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "Sleeping Beauty",
+      "year": 1959,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "5'6\"",
+      "build": "Plump",
+      "hair": "Blue",
+      "dress": "Blue",
+      "eyes": "Blue",
+      "style": "Fairy"
+    }
+  },
+  {
+    "id": "pongo",
+    "name": "Pongo",
+    "emoji": "🐕",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "101 Dalmatians",
+      "year": 1961,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "3",
+      "height": "2'0\"",
+      "build": "Medium Dalmatian",
+      "fur": "White with Black Spots",
+      "eyes": "Brown",
+      "style": "Refined"
+    }
+  },
+  {
+    "id": "perdita",
+    "name": "Perdita",
+    "emoji": "🐕",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "101 Dalmatians",
+      "year": 1961,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "2",
+      "height": "1'10\"",
+      "build": "Medium Dalmatian",
+      "fur": "White with Black Spots",
+      "eyes": "Brown",
+      "style": "Refined"
+    }
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "emoji": "👨🏻",
+    "category": "Villain Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "101 Dalmatians",
+      "year": 1961,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'10\"",
+      "build": "Slim",
+      "hair": "Black",
+      "eyes": "Brown",
+      "style": "Criminal"
+    }
+  },
+  {
+    "id": "horace",
+    "name": "Horace",
+    "emoji": "👨🏻",
+    "category": "Villain Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "101 Dalmatians",
+      "year": 1961,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 40,
+      "height": "6'0\"",
+      "build": "Heavy",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Criminal"
+    }
+  },
+  {
+    "id": "roger",
+    "name": "Roger",
+    "emoji": "👨🏻",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "101 Dalmatians",
+      "year": 1961,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 30,
+      "height": "5'11\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Composer"
+    }
+  },
+  {
+    "id": "anita",
+    "name": "Anita",
+    "emoji": "👩🏻",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "101 Dalmatians",
+      "year": 1961,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 28,
+      "height": "5'6\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Fashion Designer"
+    }
+  },
+  {
+    "id": "nanny",
+    "name": "Nanny",
+    "emoji": "👵🏻",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "101 Dalmatians",
+      "year": 1961,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 60,
+      "height": "5'4\"",
+      "build": "Plump",
+      "hair": "Grey",
+      "eyes": "Blue",
+      "style": "Traditional"
+    }
+  },
+  {
+    "id": "bert",
+    "name": "Bert",
+    "emoji": "👨🏻",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Mary Poppins",
+      "year": 1964,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'10\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Chimney Sweep"
+    }
+  },
+  {
+    "id": "jane",
+    "name": "Jane",
+    "emoji": "👧🏻",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "Mary Poppins",
+      "year": 1964,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 8,
+      "height": "4'2\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Edwardian"
+    }
+  },
+  {
+    "id": "michael-banks",
+    "name": "Michael Banks",
+    "emoji": "👦🏻",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Mary Poppins",
+      "year": 1964,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 5,
+      "height": "3'8\"",
+      "build": "Small",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Edwardian"
+    }
+  },
+  {
+    "id": "winifred",
+    "name": "Winifred Banks",
+    "emoji": "👩🏻",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "Mary Poppins",
+      "year": 1964,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 35,
+      "height": "5'6\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Blue",
+      "style": "Suffragette"
+    }
+  },
+  {
+    "id": "george",
+    "name": "George Banks",
+    "emoji": "👨🏻",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "Mary Poppins",
+      "year": 1964,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 40,
+      "height": "5'11\"",
+      "build": "Slim",
+      "hair": "Brown",
+      "eyes": "Brown",
+      "style": "Banker"
+    }
+  },
+  {
+    "id": "flotsam",
+    "name": "Flotsam",
+    "emoji": "🐟",
+    "category": "Villain Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "length": "2'0\"",
+      "build": "Eel",
+      "color": "Purple",
+      "eyes": "Yellow",
+      "style": "Sinister"
+    }
+  },
+  {
+    "id": "jetsam",
+    "name": "Jetsam",
+    "emoji": "🐟",
+    "category": "Villain Sidekick",
+    "gender": "male",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "length": "2'0\"",
+      "build": "Eel",
+      "color": "Purple",
+      "eyes": "Yellow",
+      "style": "Sinister"
+    }
+  },
+  {
+    "id": "king-triton",
+    "name": "King Triton",
+    "emoji": "🧜‍♂️",
+    "category": "Extra",
+    "gender": "male",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "Unknown",
+      "height": "8'0\"",
+      "build": "Muscular",
+      "hair": "White",
+      "beard": "White",
+      "eyes": "Blue",
+      "style": "Royal"
+    }
+  },
+  {
+    "id": "atina",
+    "name": "Atina",
+    "emoji": "🧜‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'6\"",
+      "build": "Slim",
+      "hair": "Red",
+      "tail": "Purple",
+      "eyes": "Blue",
+      "style": "Mermaid"
+    }
+  },
+  {
+    "id": "alana",
+    "name": "Alana",
+    "emoji": "🧜‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'6\"",
+      "build": "Slim",
+      "hair": "Red",
+      "tail": "Purple",
+      "eyes": "Blue",
+      "style": "Mermaid"
+    }
+  },
+  {
+    "id": "adella",
+    "name": "Adella",
+    "emoji": "🧜‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'6\"",
+      "build": "Slim",
+      "hair": "Red",
+      "tail": "Purple",
+      "eyes": "Blue",
+      "style": "Mermaid"
+    }
+  },
+  {
+    "id": "aquata",
+    "name": "Aquata",
+    "emoji": "🧜‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'6\"",
+      "build": "Slim",
+      "hair": "Red",
+      "tail": "Purple",
+      "eyes": "Blue",
+      "style": "Mermaid"
+    }
+  },
+  {
+    "id": "arista",
+    "name": "Arista",
+    "emoji": "🧜‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'6\"",
+      "build": "Slim",
+      "hair": "Red",
+      "tail": "Purple",
+      "eyes": "Blue",
+      "style": "Mermaid"
+    }
+  },
+  {
+    "id": "andrina",
+    "name": "Andrina",
+    "emoji": "🧜‍♀️",
+    "category": "Extra",
+    "gender": "female",
+    "media": {
+      "title": "The Little Mermaid",
+      "year": 1989,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 16,
+      "height": "5'6\"",
+      "build": "Slim",
+      "hair": "Red",
+      "tail": "Purple",
+      "eyes": "Blue",
+      "style": "Mermaid"
+    }
+  },
+  {
+    "id": "yzma",
+    "name": "Yzma",
+    "emoji": "👩🏽",
+    "category": "Villain",
+    "gender": "female",
+    "media": {
+      "title": "The Emperor's New Groove",
+      "year": 2000,
+      "type": "movie"
+    },
+    "stats": {
+      "age": 70,
+      "height": "6'6\"",
+      "build": "Slender",
+      "hair": "Purple",
+      "eyes": "Purple"
+    }
+  },
+  {
+    "id": "maximus",
+    "name": "Maximus",
+    "emoji": "🐎",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "Tangled",
+      "year": 2010,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "10",
+      "height": "5'7\" at shoulder",
+      "build": "Muscular Stallion",
+      "coat": "White",
+      "mane": "Blonde",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "sven",
+    "name": "Sven",
+    "emoji": "🦌",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "Frozen",
+      "year": 2013,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "8",
+      "height": "5'6\" at shoulder",
+      "build": "Strong Reindeer",
+      "coat": "Brown",
+      "antlers": "Majestic",
+      "eyes": "Brown"
+    }
+  },
+  {
+    "id": "mushu",
+    "name": "Mushu",
+    "emoji": "🐉",
+    "category": "Animal",
+    "gender": "male",
+    "media": {
+      "title": "Mulan",
+      "year": 1998,
+      "type": "movie"
+    },
+    "stats": {
+      "age": "1000+",
+      "length": "1'6\"",
+      "build": "Serpentine Dragon",
+      "scales": "Red",
+      "whiskers": "Long",
+      "eyes": "Yellow"
+    }
+  }
+]

@@ -1,18 +1,16 @@
 {
   "name": "disney-fmk",
-  "version": "1.0.0",
-  "description": "FMK but Disney",
-  "main": "dist/index.html",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://matt-meaningfulgigs.github.io/disney-fmk",
   "scripts": {
-    "build": "tsc && cp -r src/public/* dist/",
-    "start": "npx serve dist",
-    "dev": "tsc --watch"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.3.3",
-    "serve": "^14.2.1"
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
   }
 }
