@@ -343,8 +343,6 @@ document.querySelector('#cards')?.addEventListener('click', (e) => {
 })
 
 function updateFilters() {
-  const genderFilter = genderSelect.value;
-  const categoryFilter = categorySelect.value;
   const showExtended = extendedUniverseCheckbox.checked;
 
   // Toggle 80s theme
