@@ -4,6 +4,12 @@ A modern, interactive web application that puts a playful twist on the classic "
 
 > Made by Matt, for Jan and her friends to use once and forget about. I spent way too much time on this, but hey, at least it looks pretty! 😅
 
+## 🌐 Accessing the Application
+
+The application is live and can be accessed at: [Kingdom of FMK](https://matt-meaningfulgigs.github.io/disney-fmk/)
+
+You can also visit the repository at: [GitHub Repository](https://github.com/matt-meaningfulgigs/disney-fmk)
+
 ## 🎮 Features
 
 - **Interactive Character Cards**: Beautiful, responsive cards with detailed character information
@@ -33,7 +39,7 @@ A modern, interactive web application that puts a playful twist on the classic "
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/disney-fmk.git
+   git clone https://github.com/matt-meaningfulgigs/disney-fmk.git
    cd disney-fmk
    ```
 
@@ -94,5 +100,5 @@ The application supports various URL parameters for sharing game states:
 
 Example URL:
 ```
-https://yourusername.github.io/disney-fmk/?char1=id1,fuck&char2=id2,marry&char3=id3,kill&gender=female&category=Movies
+https://matt-meaningfulgigs.github.io/disney-fmk/?char1=id1,fuck&char2=id2,marry&char3=id3,kill&gender=female&category=Movies
 ```
